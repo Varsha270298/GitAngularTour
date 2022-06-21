@@ -1,3 +1,9 @@
+
+ <h1 text-align="center"><a [routerLink]="['addtour']" [routerLinkActive]="['active']">add package</a> </h1>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0e000c980412ce7f4a0fdce8c4284fcadfc14003
 <h1>hello world</h1>
 <h2>from shaik</h2>
 <h3>from varsha</h3>
@@ -6,3 +12,14 @@
 <h1> $hankhanil </h1>
 <p>Hi this is rangareddy</p>
 <h2>Kalyani</h2>
+<header></header>
+<nav class='navbar navbar-expand navbar-light bg-light'>
+    <a class='navbar-brand'>{{title}}</a>
+    <ul class='nav nav-pills'>
+      <li><a class='nav-link' routerLinkActive='active' routerLink='/tourinfo'>reservedtourpackages</a></li>
+      <li><a class='nav-link' routerLinkActive='active' routerLink='/tourinfo-edit'>Edit</a></li>
+    </ul>
+</nav>
+<div class='container'>
+<router-outlet></router-outlet>
+</div>

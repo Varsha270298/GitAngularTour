@@ -1,0 +1,98 @@
+
+
+<div class="container contact">
+	<div class="row">
+		<h1>Customer Sign Up</h1>
+        <form  [formGroup]="sampleForm" (ngSubmit)="display()"class="row g-3 needs-validation" novalidate>
+            <div class="col-md-9">
+                <div class="contact-form">
+                    <div class="form-group">
+                    <label class="control-label col-sm-2" for="fname">First Name:</label>
+                    <div class="col-sm-10">          
+                        <input type="text" class="form-control" id="fname" placeholder="Enter First Name" formControlName="firstName" name="fname">
+                    </div>
+                    
+                    </div>
+                    <div class="form-group">
+                    <label class="control-label col-sm-2" for="lname">Last Name:</label>
+                    <div class="col-sm-10">          
+                        <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" formControlName="lastName"  name="lname">
+                    </div>
+                    </div>
+                    <div class="form-group">
+                    <label class="control-label col-sm-2" for="userId">User Id:</label>
+                    <div class="col-sm-10">
+                        <input type="userId" class="form-control" id="userId" placeholder="Enter EmailId" formControlName="userId"  name="userId">
+                    </div>
+                    </div>
+                    <div class="form-check">
+                        <label for="gender">Gender : </label>
+                        <input class="radioclass"type="radio"  value="male" id="gender" formControlName="gender">Male
+                        <input class="radioclass"type="radio"  value="female" id="gender" formControlName="gender">Female
+                    </div>
+                    <div class="form-check"style="display: flex;">
+                        <div class="form-group" style="width: 40%">
+                            <label class="control-label" for="lname">Age:</label>
+                            <div class="col-md-12">          
+                                <input 
+                                    type="number" 
+                                    class="form-control" 
+                                    id="age" 
+                                    placeholder="Enter age" 
+                                    formControlName="age"  
+                                    name="age">
+                            </div>
+                            </div>
+                            <div class="form-group" style="width: 43%;padding-left: 2%;">
+                                <label class="control-label" for="lname">Mobile Number:</label>
+                                <div class="col-md-12">          
+                                    <input type="text" 
+                                        class="form-control" 
+                                        id="mobileNo" 
+                                        placeholder="Enter Mobile No." 
+                                        formControlName="mobileNo"  
+                                        name="mobileNo"
+                                        maxlength="10">
+                                </div>
+                                </div>
+                    </div>
+
+                    <div class="form-check"style="display: flex;">
+                        <div class="form-group" style="width: 40%">
+                            <label class="control-label" for="lname">Enter Password:</label>
+                            <div class="col-md-12">          
+                                <input 
+                                    type="password" 
+                                    class="form-control" 
+                                    id="password" 
+                                    placeholder="Enter Password" 
+                                    formControlName="password"  
+                                    name="password"
+                                    maxlength="10">
+                            </div>
+                            </div>
+                            <div class="form-group" style="width: 43%;padding-left: 2%;">
+                                <label class="control-label" for="lname">Confirm Password:</label>
+                                <div class="col-md-12">          
+                                    <input type="password" 
+                                        class="form-control" 
+                                        id="cpassword" 
+                                        placeholder="Confirm Password" 
+                                        formControlName="cpassword"  
+                                        name="cpassword"
+                                        maxlength="10">
+                                </div>
+                                </div>
+                    </div>
+
+                    <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+	</div>
+</div>
