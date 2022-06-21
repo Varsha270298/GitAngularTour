@@ -10,12 +10,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { AddTourComponent } from './add-tour/add-tour.component';
 import { TourinfoComponent } from './tourinfo/tourinfo.component';
 import { TourinfoEditComponent } from './tourinfo-edit/tourinfo-edit.component';
-<<<<<<< HEAD
-=======
 
 
   
->>>>>>> 0e000c980412ce7f4a0fdce8c4284fcadfc14003
 
 @NgModule({
   declarations: [
@@ -25,10 +22,7 @@ import { TourinfoEditComponent } from './tourinfo-edit/tourinfo-edit.component';
     TourinfoComponent,
     TourinfoEditComponent,
     AddTourComponent,
-<<<<<<< HEAD
-=======
    
->>>>>>> 0e000c980412ce7f4a0fdce8c4284fcadfc14003
   ],
   imports: [
     BrowserModule,
