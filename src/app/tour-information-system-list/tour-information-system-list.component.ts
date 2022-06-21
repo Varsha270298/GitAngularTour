@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+/*import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AdminAddService } from '../admin-add.service';
+
 
 @Component({
   selector: 'app-tour-information-system-list',
@@ -22,4 +24,4 @@ export class TourInformationSystemListComponent implements OnInit {
       });
   }
 
-}
+}*/
