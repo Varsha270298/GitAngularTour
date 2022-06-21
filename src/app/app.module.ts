@@ -12,6 +12,16 @@ import { AddTourComponent } from './add-tour/add-tour.component';
     AppComponent,
     AddTourComponent,
   
+import { TourinfoComponent } from './tourinfo/tourinfo.component';
+import { HttpClientModule } from "@angular/common/http";
+import { TourinfoEditComponent } from './tourinfo-edit/tourinfo-edit.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    TourinfoComponent,
+    TourinfoEditComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +29,8 @@ import { AddTourComponent } from './add-tour/add-tour.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
