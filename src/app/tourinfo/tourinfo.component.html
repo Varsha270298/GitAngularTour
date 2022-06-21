@@ -1,0 +1,50 @@
+<div class="card">
+    <div class="card-header">
+        {{title}}
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>PackageName</th>
+                            <th>NoofPersons</th>
+                            <th>NoOfdays</th>
+                            <th>Transportation</th>
+                            <th>Hotel</th>
+                            <th>StartDate</th>
+                            <th>Enddate</th>
+                            <th>AmountPerPerson</th>
+                            <th>Paymode</th>
+                            <th>BookingStatus</th>
+                            <th>paymentConformation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let t of tourinfo">
+                            <td>{{t.packageName}}></td>
+                            <td>{{t.noOfPersons}}></td>
+                            <td>{{t.numberOfDays}}</td>
+                            <td>{{t.modeOfTransportation}}></td>
+                            <td>{{t.hotel}}</td>
+                            <td>{{t.startDate}}</td>
+                            <td>{{t.endDate}}></td>
+                            <td>{{t.amountPerPerson}}</td>
+                            <td>{{t.paymode}}</td>
+                            <td>{{t.statusof}}</td>
+                            <td>{{t.confirm}}</td>
+                            <td>
+                                <button class="btn btn-outline-primary btn-sm" routerLinkActive='active'
+                                        [routerLink]="['/tourinfo-edit', 'edit']">
+                                  Edit
+                                </button>
+                              </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
