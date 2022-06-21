@@ -7,21 +7,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminAddService } from './admin-add.service';
 import {HttpClientModule} from '@angular/common/http';
 import { AddTourComponent } from './add-tour/add-tour.component';
-@NgModule({
-  declarations: [
-    AppComponent,
-    AddTourComponent,
-  
 import { TourinfoComponent } from './tourinfo/tourinfo.component';
-import { HttpClientModule } from "@angular/common/http";
 import { TourinfoEditComponent } from './tourinfo-edit/tourinfo-edit.component';
-import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     TourinfoComponent,
-    TourinfoEditComponent
+    TourinfoEditComponent,
+    AddTourComponent,
   ],
   imports: [
     BrowserModule,
