@@ -30,6 +30,9 @@ export class AdminAddService {
   deleteTourById(id: number): Observable<any> {
     return this.http.delete<any>(this.baseUrl + id);
   }
+ updateTour(tour:Tour): Observable<ApiResponse> {
+    return this.http.put<ApiResponse>(this.baseUrl + tour.packageId, tour);
+  }
 
 
 }
