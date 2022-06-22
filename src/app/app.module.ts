@@ -25,7 +25,11 @@ import { TourInformationSystemListComponent } from './tour-information-system-li
     TourinfoComponent,
     TourinfoEditComponent,
     AddTourComponent,
+<<<<<<< HEAD
     TourInformationSystemListComponent
+=======
+    TourInformationSystemListComponent,
+>>>>>>> 37da7fcacfcc415124dbd884b68156b4beffaa88
    
   ],
   imports: [

@@ -15,6 +15,7 @@
       </tr>
       </thead>
       <tbody>
+<<<<<<< HEAD
       <tr *ngFor="let t of tours">
         <!-- <td class="hidden">{{user.id}}</td> -->
         <td>{{t.packageId}}</td>
@@ -27,5 +28,20 @@
       </tr>
       </tbody>
     </table>
+=======
+      <tr *ngFor="let package of Package">
+        <td class="hidden">{{user.id}}</td>
+        <td>{{package.packageId}}</td>
+        <td>{{package.packageName}}</td>
+        <td>{{package.description}}</td>
+        <td>{{package.numberOfDays}}</td>
+        <td>{{package.amountPerPerson}}</td>
+        <td>{{package.modeOfTransportation}}</td>
+        <td>{{package.hotel}}</td>
+      </tr>
+      </tbody>
+    </table>
+    <button></button>
+>>>>>>> 37da7fcacfcc415124dbd884b68156b4beffaa88
   </div> 
   
