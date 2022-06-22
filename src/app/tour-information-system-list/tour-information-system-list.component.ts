@@ -1,8 +1,8 @@
 import { Token } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AddTourComponent } from '../add-tour/add-tour.component';
 import { AdminAddService } from '../admin-add.service';
+import { Tour } from '../tour';
 
 
 @Component({
@@ -11,7 +11,7 @@ import { AdminAddService } from '../admin-add.service';
   styleUrls: ['./tour-information-system-list.component.css']
 })
 export class TourInformationSystemListComponent implements OnInit {
-  packages!: AddTourComponent[];
+  packages!: Tour[];
   constructor(private router: Router, private apiService: AdminAddService) { }
 
   
@@ -22,7 +22,7 @@ export class TourInformationSystemListComponent implements OnInit {
       return;
     }
     this.apiService.getTour()
-      .subscribe( (data: { result: AddTourComponent[]; }) => {
+      .subscribe( (data: { result: Tour[]; }) => {
           this.packages = data.result;
       });
   }

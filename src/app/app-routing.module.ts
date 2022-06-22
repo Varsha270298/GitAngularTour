@@ -15,12 +15,8 @@ const routes: Routes =[
 {path:'tourinfo-edit',component:TourinfoEditComponent },
 {path:'customer',component:CustomerComponent},
 {path:'login',component:LoginComponent},
-<<<<<<< HEAD
 { path: 'edittour', component:EditTourInformationSystemComponent },
 {path:'viewtour',component:TourInformationSystemListComponent}
-=======
-{ path: 'edittour', component: EditTourInformationSystemComponent},
->>>>>>> 452a4fbf765c7cc600e9a33f8f3bf8fe0c26137d
 
 ]
   
