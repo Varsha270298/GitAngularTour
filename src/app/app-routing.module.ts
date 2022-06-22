@@ -16,7 +16,11 @@ const routes: Routes =[
 {path:'customer',component:CustomerComponent},
 {path:'login',component:LoginComponent},
 { path: 'edittour', component:EditTourInformationSystemComponent },
+<<<<<<< HEAD
 {path:'viewtour',component:TourInformationSystemListComponent}
+=======
+{ path: 'listtour', component: TourInformationSystemListComponent},
+>>>>>>> d484de5b6e8f3ce34ebe04a158385609810c2505
 
 ]
   

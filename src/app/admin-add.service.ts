@@ -15,7 +15,7 @@ export class AdminAddService {
   constructor(private http: HttpClient) { }
    private url : string= "http://localhost:8282/Tour_Management/tour/addtour";
    private updateUrl: string= "http://localhost:8282/Tour_Management/tour/edittour";
-  //  private updateUrl: string= "http://localhost:8282/Tour_Management/tour";
+    private listUrl: string= "http://localhost:8282/Tour_Management/tour";
   //  private updateUrl: string= "http://localhost:8282/Tour_Management/tour";
 
   
@@ -24,7 +24,7 @@ export class AdminAddService {
   }
 
   getTour() : Observable<any> {
-    return this.http.get<any>(this.url);
+    return this.http.get<any>(this.listUrl);
   }
 
   getTourById(id: number): Observable<any> {
