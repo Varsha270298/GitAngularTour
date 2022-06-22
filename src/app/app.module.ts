@@ -11,6 +11,7 @@ import { AdminAddService } from './admin-add.service';
 import { AddTourComponent } from './add-tour/add-tour.component';
 import { TourinfoComponent } from './tourinfo/tourinfo.component';
 import { TourinfoEditComponent } from './tourinfo-edit/tourinfo-edit.component';
+import { TourInformationSystemListComponent } from './tour-information-system-list/tour-information-system-list.component';
 
 
   
@@ -24,6 +25,7 @@ import { TourinfoEditComponent } from './tourinfo-edit/tourinfo-edit.component';
     TourinfoComponent,
     TourinfoEditComponent,
     AddTourComponent,
+    TourInformationSystemListComponent
    
   ],
   imports: [
