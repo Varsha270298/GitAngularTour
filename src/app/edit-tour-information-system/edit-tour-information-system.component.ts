@@ -18,7 +18,7 @@ export class EditTourInformationSystemComponent implements OnInit {
     let packageId = window.localStorage.getItem("packageId");
     if(!packageId) {
       alert("Invalid action.")
-      this.router.navigate(['viewtour']);
+      this.router.navigate(['listtour']);
       return;
     }
   this.editForm = this.formBuilder.group({
@@ -30,10 +30,10 @@ amountPerPerson: ['', Validators.required],
 modeOfTransportation: ['', Validators.required],
 hotel: ['', Validators.required]
 });
- this.apiService.getTourById(+packageId)
-.subscribe( (data: { result: { [key: string]: any; }; }) => {
-  this.editForm.setValue(data.result);
- });
+// this.apiService.getTourById(+packageId)
+// .subscribe( (data: { result: { [key: string]: any; }; }) => {
+//   this.editForm.setValue(data.result);
+// });
   }
 onSubmit() {
   this.apiService.updateTour(this.editForm.value)
@@ -42,7 +42,7 @@ onSubmit() {
       (      data: { status: number; message: any; }) => {
         if(data.status === 200) {
           alert('Package updated successfully.');
-          this.router.navigate(['viewtour']);
+          this.router.navigate(['listtour']);
         }else {
           alert(data.message);
         }
