@@ -32,7 +32,10 @@ export class AddTourComponent implements OnInit {
   onSubmit() {
     this.apiService.addTour(this.addForm.value)
      
-      .subscribe( data =>this.message=data);
+      // .subscribe( data =>this.message=data);
+      .subscribe( data => {
+        this.router.navigate(['listtour']);
+      });
   }
 
 }
