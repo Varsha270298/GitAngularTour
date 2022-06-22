@@ -27,7 +27,7 @@ export class TourInformationSystemListComponent implements OnInit {
     //       this.tours = data.result;
     //   });
     this.apiService.getTour()
-            .subscribe(
+      .subscribe(
          data=>{console.log(data);
         this.tours=data}
       );
