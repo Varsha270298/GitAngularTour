@@ -10,13 +10,23 @@ import { TourinfoComponent } from './tourinfo/tourinfo.component';
 
 
 const routes: Routes =[
+{ path: 'addtour', component:AddTourComponent },
 { path: 'addtour', component: AddTourComponent },
 {path:'tourinfo',component:TourinfoComponent},
 {path:'tourinfo-edit',component:TourinfoEditComponent },
 {path:'customer',component:CustomerComponent},
 {path:'login',component:LoginComponent},
+
 { path: 'edittour', component:EditTourInformationSystemComponent },
+<<<<<<< HEAD
 { path: 'listtour', component: TourInformationSystemListComponent},
+=======
+
+{path:'viewtour',component:TourInformationSystemListComponent},
+
+{ path: 'listtour', component: TourInformationSystemListComponent},
+
+>>>>>>> d9aa65ae13c5fe382a03413276c81756c94e6ade
 
 ]
   

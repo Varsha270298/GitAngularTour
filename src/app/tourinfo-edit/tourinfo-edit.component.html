@@ -17,9 +17,9 @@
                 </div>
             </div>
             <div class="form-group row mb-2">
-                <label class="col-md-2 col-form-label" for="startDate"> StartDate:</label>
+                <label class="col-md-2 col-form-label" for="startDate">StartDate:</label>
                 <div class="col-md-8">
-                    <input class="form-control" id="sdate" type="text" formControlName="startDate" required>
+                    <input class="form-control" id="sdate" type="date" formControlName="startDate" required>
                     <!-- [ngClass]="{'is-invalid':displayMessage.startDate]}"/>
                     <span class="invalid-feedback">
                         {{displayMessage.startDate}}
@@ -29,8 +29,14 @@
                  <div class="form-group row mb-2">
                     <label class="col-md-2 col-form-label" for="endDate"> EndDate:</label>
                     <div class="col-md-8">
-                        <input class="form-control" id="edate" type="text" formControlName="endDate" required>
-                        
+                        <input class="form-control" id="edate" type="date" formControlName="endDate" required>
+                        <div *ngIf="(endDate?.dirty || endDate?.touched)"
+               class="alert alert-danger">
+
+         <div *ngIf="endDate?.errors?.['required']">
+          EndDate is required.
+          </div>
+           </div>
                         
                      </div>
                </div>
@@ -85,6 +91,7 @@
         <input class="form-control" id="statusof" type="text" formControlName="statusof" readonly>
     </div>
 </div>
+
 <div class="form-group row mb-2">
     <div class="offset-md-2 col-md-4">
       <button class="btn btn-primary mr-3"
@@ -98,6 +105,7 @@
       style="width:80px;"
       type="button"
       title="Cancel your edits"
+      routerLinkActive="active"
       [routerLink]="['/tourinfo']">
       Cancel
      </button>
