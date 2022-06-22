@@ -16,7 +16,6 @@ const routes: Routes =[
 {path:'customer',component:CustomerComponent},
 {path:'login',component:LoginComponent},
 { path: 'edittour', component:EditTourInformationSystemComponent },
-
 { path: 'listtour', component: TourInformationSystemListComponent},
 
 ]
