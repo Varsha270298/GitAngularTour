@@ -30,10 +30,10 @@ amountPerPerson: ['', Validators.required],
 modeOfTransportation: ['', Validators.required],
 hotel: ['', Validators.required]
 });
-// this.apiService.getTourById(+packageId)
-// .subscribe( (data: { result: { [key: string]: any; }; }) => {
-//   this.editForm.setValue(data.result);
-// });
+ this.apiService.getTourById(+packageId)
+.subscribe( (data: { result: { [key: string]: any; }; }) => {
+  this.editForm.setValue(data.result);
+ });
   }
 onSubmit() {
   this.apiService.updateTour(this.editForm.value)

@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AddTourComponent } from '../add-tour/add-tour.component';
 import { AdminAddService } from '../admin-add.service';
+<<<<<<< HEAD
+import { Tour } from '../tour';
+
+=======
 import {Tour} from '../tour'
+>>>>>>> d484de5b6e8f3ce34ebe04a158385609810c2505
 
 @Component({
   selector: 'app-tour-information-system-list',
@@ -10,7 +14,7 @@ import {Tour} from '../tour'
   styleUrls: ['./tour-information-system-list.component.css']
 })
 export class TourInformationSystemListComponent implements OnInit {
-  packages!: AddTourComponent[];
+  packages!: Tour[];
   constructor(private router: Router, private apiService: AdminAddService) { }
 
   
@@ -28,10 +32,16 @@ export class TourInformationSystemListComponent implements OnInit {
     //       this.tours = data.result;
     //   });
     this.apiService.getTour()
+<<<<<<< HEAD
+      .subscribe( (data: { result: Tour[]; }) => {
+          this.packages = data.result;
+      });
+=======
       .subscribe(
          data=>{console.log(data);
         this.tours=data}
       );
+>>>>>>> d484de5b6e8f3ce34ebe04a158385609810c2505
   }
 
 }
