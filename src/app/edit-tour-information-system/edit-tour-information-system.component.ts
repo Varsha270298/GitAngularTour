@@ -18,7 +18,7 @@ export class EditTourInformationSystemComponent implements OnInit {
     let packageId = window.localStorage.getItem("packageId");
     if(!packageId) {
       alert("Invalid action.")
-      this.router.navigate(['list-packages']);
+      this.router.navigate(['viewtour']);
       return;
     }
   this.editForm = this.formBuilder.group({
@@ -42,7 +42,7 @@ onSubmit() {
       (      data: { status: number; message: any; }) => {
         if(data.status === 200) {
           alert('Package updated successfully.');
-          this.router.navigate(['edittour']);
+          this.router.navigate(['viewtour']);
         }else {
           alert(data.message);
         }

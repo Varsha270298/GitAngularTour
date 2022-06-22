@@ -1,5 +1,7 @@
-/*import { Component, OnInit } from '@angular/core';
+import { Token } from '@angular/compiler';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AddTourComponent } from '../add-tour/add-tour.component';
 import { AdminAddService } from '../admin-add.service';
 
 
@@ -9,19 +11,20 @@ import { AdminAddService } from '../admin-add.service';
   styleUrls: ['./tour-information-system-list.component.css']
 })
 export class TourInformationSystemListComponent implements OnInit {
+  packages!: AddTourComponent[];
+  constructor(private router: Router, private apiService: AdminAddService) { }
 
-  constructor(private router: Router, private apiService: ApiService) { }
+  
 
-  packages!: TourInformationSystem[];
   ngOnInit(): void {
     if(!window.localStorage.getItem('token')) {
       this.router.navigate(['login']);
       return;
     }
-    this.apiService.getUsers()
-      .subscribe( (data: { result: TourInformationSystem[]; }) => {
+    this.apiService.getTour()
+      .subscribe( (data: { result: AddTourComponent[]; }) => {
           this.packages = data.result;
       });
   }
 
-}*/
+}
