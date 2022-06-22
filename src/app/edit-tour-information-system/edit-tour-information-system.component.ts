@@ -15,12 +15,12 @@ export class EditTourInformationSystemComponent implements OnInit {
   submitted = false;
   constructor(private formBuilder: FormBuilder,private router:Router,private apiService:AdminAddService) { }
   ngOnInit() { 
-    let packageId = window.localStorage.getItem("packageId");
-    if(!packageId) {
-      alert("Invalid action.")
-      this.router.navigate(['viewtour']);
-      return;
-    }
+    // let packageId = window.localStorage.getItem("packageId");
+    // if(!packageId) {
+    //   alert("Invalid action.")
+    //   this.router.navigate(['viewtour']);
+    //   return;
+    // }
   this.editForm = this.formBuilder.group({
     packageId: [''],
 packageName: ['', Validators.required],
