@@ -13,25 +13,29 @@ export class AdminAddService {
 
    
   constructor(private http: HttpClient) { }
-  baseUrl : string= "http://localhost:8282/Tour_Management/tour/addtour";
+   private url : string= "http://localhost:8282/Tour_Management/tour/addtour";
+   private updateUrl: string= "http://localhost:8282/Tour_Management/tour/edittour";
+  //  private updateUrl: string= "http://localhost:8282/Tour_Management/tour";
+  //  private updateUrl: string= "http://localhost:8282/Tour_Management/tour";
 
   
   addTour(tour:Tour): Observable<any> {
-    return this.http.post<any>(this.baseUrl, tour);
+    return this.http.post<any>(this.url, tour);
   }
 
   getTour() : Observable<any> {
-    return this.http.get<any>(this.baseUrl);
+    return this.http.get<any>(this.url);
   }
 
   getTourById(id: number): Observable<any> {
-    return this.http.get<any>(this.baseUrl + id);
+    return this.http.get<any>(this.url + id);
   }
   deleteTourById(id: number): Observable<any> {
-    return this.http.delete<any>(this.baseUrl + id);
+    return this.http.delete<any>(this.url + id);
   }
  updateTour(tour:Tour): Observable<ApiResponse> {
-    return this.http.put<ApiResponse>(this.baseUrl + tour.packageId, tour);
+    //return this.http.put<ApiResponse>(this.updateUrl + tour.packageId, tour);
+    return this.http.put<ApiResponse>(this.updateUrl, tour);
   }
 
 
