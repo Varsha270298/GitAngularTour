@@ -1,0 +1,43 @@
+<div class="col-md-6 user-container">
+    <h2 class="text-center">Edit Package Detils</h2>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <div class="hidden">
+        <label for="packageId">Package ID:</label>
+        <input type="number" formControlName="packageId" placeholder="Enter Package Id" name="packageId" class="form-control" id="packageId">
+      </div>
+      <div class="form-group">
+        <label for="packageName">Package Name:</label>
+        <input type="text" formControlName="packageName" placeholder=" Enter Package Id" name="packagename" class="form-control" id="packageName">
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <input formControlName="description" placeholder="Descrption" name="description" class="form-control" id="description">
+      </div>
+  
+      <div class="form-group">
+        <label for="numberOfDays">No of Days:</label>
+        <input type="number" formControlName="numberOfDays" placeholder="enter no of days " name="no_of_days" class="form-control" id="numberOfDays">
+      </div>
+  
+      <div class="form-group">
+        <label for="amountPerPerson">Amount Per Person:</label>
+        <input type="number" formControlName="amountPerPerson" placeholder="enter amount" name="amount_per_person" class="form-control" id="aamountPerPerson">
+      </div>
+  
+      <div class="form-group">
+        <label for="modeOfTransportation">Mode Of Transportation:</label>
+        <input type="text" formControlName="modeOfTransportation" placeholder="enter transportation mode" name="transportation" class="form-control" id="modeOfTransportation">
+      </div>
+
+      <div class="form-group">
+        <label for="hotel">Hotel:</label>
+        <input type="text" formControlName="hotel" placeholder="enter hotel name" name="hotel" class="form-control" id="hotel">
+      </div>
+  
+      <button class="btn btn-success">Update</button>
+    </form>
+
+  </div>
+  
+  
