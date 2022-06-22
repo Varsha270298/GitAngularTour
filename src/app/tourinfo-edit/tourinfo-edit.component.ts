@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChildren } from '@angular/core';
 import { FormBuilder, FormGroup,FormControl,FormControlName, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { fromEvent, merge, Observable, Subscription,debounceTime } from 'rxjs';
 
 import { GenericValidator } from '../Shared/generic-validator';
+import { ITourInfo } from '../tourinfo/tourInfo';
 
 import { TourinfoService } from '../tourinfo/tourinfo.service';
 
@@ -22,7 +23,7 @@ export class TourinfoEditComponent implements OnInit, AfterViewInit, OnDestroy {
   displayMessage: { [key: string]: string } = {};
   private validationMessages: { [key: string]: { [key: string]: string } };
   private genericValidator: GenericValidator;
-  constructor(private formBuilder: FormBuilder,private tourservice:TourinfoService,private router: Router) {
+  constructor(private formBuilder: FormBuilder,private tourservice:TourinfoService,private router: Router,private route:ActivatedRoute) {
 
     this.validationMessages = {
       startDate:{
@@ -42,6 +43,7 @@ export class TourinfoEditComponent implements OnInit, AfterViewInit, OnDestroy {
  
   ngOnInit(): void {
     this.tourInfoForm=this.formBuilder.group({
+     
       packageName:'',
       description:'',
 	    startDate:['',Validators.required],
@@ -54,28 +56,32 @@ export class TourinfoEditComponent implements OnInit, AfterViewInit, OnDestroy {
 	    confirm:['',Validators.required],
       hotel:'',
 	    statusof:['',Validators.required],
-
+      
 
     })
-    
+   
 
+  }
+  get endDate() { 
+    return this.tourInfoForm.get('endDate'); 
   }
   
   onSubmit(){
     this.tourservice.updateUser(this.tourInfoForm.value).subscribe(
       data=>{
         if(data.status==200){
-          alert('Updated Successfully')
-          this.router.navigate(['/tourInfo'])
+          alert('Updated Successfully');
+          this.router.navigate(['/tourInfo']);
         }
         else{
-         alert(data.message)
+         alert(data.message);
         }
       }
     );
 
-    
-
+  }
+  onCancel():void{
+    this.router.navigate(['/tourinfo']);
   }
   ngAfterViewInit(): void {
     

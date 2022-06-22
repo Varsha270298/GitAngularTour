@@ -7,9 +7,9 @@ import { ITourInfo } from './tourInfo';
   providedIn: 'root'
 })
 export class TourinfoService {
-   private url='http://localhost:8282/Tour_Management/customer/resereveid';
+   private url='http://localhost:8282/Tour_Management/customer/resereveid/';
    private urlUpdate='http://localhost:8282/Tour_Management/customer/updatereservetour';
-   
+  
   constructor(private http: HttpClient) {}
   
   
