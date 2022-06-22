@@ -7,12 +7,11 @@ import { TourinfoComponent } from './tourinfo/tourinfo.component';
 import { AddTourComponent } from './add-tour/add-tour.component';
 
 const routes: Routes =[
-{ path: 'addtour', component: AddTourComponent },
-{path:'tourinfo',component: TourinfoComponent},
+{ path: 'addtour', component:AddTourComponent },
+{path:'tourinfo',component:TourinfoComponent},
 {path:'tourinfo-edit',component:TourinfoEditComponent },
 {path:'customer',component:CustomerComponent},
 {path:'login',component:LoginComponent},
-{ path: 'addtour', component: AddTourComponent },
 
 ]
   

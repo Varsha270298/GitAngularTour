@@ -1,6 +1,6 @@
 export interface ITourInfo{
 
- 
+	reserevdPackageId: number;
      packageName:string,
 	 description:string,
 	 startDate:string,
