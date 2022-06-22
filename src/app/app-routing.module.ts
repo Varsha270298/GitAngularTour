@@ -14,7 +14,7 @@ const routes: Routes =[
 {path:'tourinfo-edit',component:TourinfoEditComponent },
 {path:'customer',component:CustomerComponent},
 {path:'login',component:LoginComponent},
-{ path: 'edittour', component:EditTourInformationSystemComponent },
+{ path: 'edittour', component: EditTourInformationSystemComponent},
 
 ]
   
