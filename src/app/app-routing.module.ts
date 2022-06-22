@@ -18,15 +18,11 @@ const routes: Routes =[
 {path:'login',component:LoginComponent},
 
 { path: 'edittour', component:EditTourInformationSystemComponent },
-<<<<<<< HEAD
-{ path: 'listtour', component: TourInformationSystemListComponent},
-=======
 
 {path:'viewtour',component:TourInformationSystemListComponent},
 
 { path: 'listtour', component: TourInformationSystemListComponent},
 
->>>>>>> 7ac7f8e09f5ef8774987273ad40864a151c7429b
 
 ]
   
