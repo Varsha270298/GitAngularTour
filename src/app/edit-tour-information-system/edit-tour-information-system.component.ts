@@ -42,7 +42,7 @@ onSubmit() {
       (      data: { status: number; message: any; }) => {
         if(data.status === 200) {
           alert('Package updated successfully.');
-          this.router.navigate(['viewtour']);
+          this.router.navigate(['listtour']);
         }else {
           alert(data.message);
         }
