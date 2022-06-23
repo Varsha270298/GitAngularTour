@@ -7,44 +7,35 @@ import { EditTourInformationSystemComponent } from './edit-tour-information-syst
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { ListUserComponent } from './list-user/list-user.component';
 import { LoginComponent } from './login/login.component';
-<<<<<<< HEAD
 //import { RegisterComponent } from './register/register.component';
-=======
 import { TourInformationSystemListComponent } from './tour-information-system-list/tour-information-system-list.component';
->>>>>>> eeb72d4408782f74d271a4f6b08c826ced11702a
 import { TourinfoEditComponent } from './tourinfo-edit/tourinfo-edit.component';
 import { TourinfoComponent } from './tourinfo/tourinfo.component';
 
 
 const routes: Routes =[
 { path: 'addtour', component:AddTourComponent },
-{ path: 'addtour', component: AddTourComponent },
+
 {path:'tourinfo',component:TourinfoComponent},
 {path:'tourinfo-edit',component:TourinfoEditComponent },
 {path:'customer',component:CustomerComponent},
 {path:'login',component:LoginComponent},
-<<<<<<< HEAD
-=======
+
 
 { path: 'edittour', component:EditTourInformationSystemComponent },
-<<<<<<< HEAD
+
 { path: 'add-user', component: AddUserComponent },
 { path: 'list-user', component: ListUserComponent },
 { path: 'edit-user', component: EditUserComponent },
 //{path:'register', component:RegisterComponent},
-=======
-<<<<<<< HEAD
->>>>>>> af479dc9a738557c6c854ee858ea5acc613fb706
+
+
 { path: 'listtour', component: TourInformationSystemListComponent},
 { path: 'edittour', component:EditTourInformationSystemComponent },
 {path:'viewtour',component:TourInformationSystemListComponent},
 
 
-<<<<<<< HEAD
-=======
->>>>>>> d9aa65ae13c5fe382a03413276c81756c94e6ade
->>>>>>> eeb72d4408782f74d271a4f6b08c826ced11702a
->>>>>>> af479dc9a738557c6c854ee858ea5acc613fb706
+
 
 ]
   
