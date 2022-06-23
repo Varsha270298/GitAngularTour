@@ -14,12 +14,14 @@ export class TourinfoComponent implements OnInit {
   title:string="ReserevedPacakges";
   t!:ITourInfo;
   sub!:Subscription;
-  id:number=2;
+  id!:number;
   
-  constructor(private tourservice:TourinfoService,private router:Router, private route: ActivatedRoute) { }
+  constructor(private tourservice:TourinfoService,private router:Router, private _route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getReservebyId(this.id);
+
+   
 
   }
    getReservebyId(id:number){
@@ -28,8 +30,9 @@ export class TourinfoComponent implements OnInit {
      )
    }
    editPackage(t:ITourInfo):void{
-    this.router.navigate(['/tourinfo-edit'])
+    this.router.navigate(['/tourinfo/:id'])
   }
+  
    
     
  

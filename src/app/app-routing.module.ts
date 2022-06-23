@@ -17,14 +17,14 @@ import { TourinfoComponent } from './tourinfo/tourinfo.component';
 const routes: Routes =[
 { path:'addtour', component: AddTourComponent },
 {path:'tourinfo',component:TourinfoComponent},
-{path:'tourinfo-edit',component:TourinfoEditComponent },
+{path:'tourinfo/:id',component:TourinfoEditComponent },
 {path:'customer',component:CustomerComponent},
 {path:'login',component:LoginComponent},
 { path: 'edittour', component:EditTourInformationSystemComponent },
 { path: 'listtour', component: TourInformationSystemListComponent},
 { path: 'CustTourList', component:CustomerTourListComponent },
 { path: 'restourlist', component:TourinfoListComponent },
-{ path: 'edittour', component:EditTourInformationSystemComponent },
+
 { path: 'add-user', component: AddUserComponent },
 { path: 'list-user', component: ListUserComponent },
 { path: 'edit-user', component: EditUserComponent },

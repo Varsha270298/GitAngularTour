@@ -20,10 +20,11 @@ export class TourinfoEditComponent implements OnInit, AfterViewInit, OnDestroy {
   title:string="ReserevedTourPackage";
   tourInfoForm!: FormGroup;
   sub!:Subscription;
+ 
   displayMessage: { [key: string]: string } = {};
   private validationMessages: { [key: string]: { [key: string]: string } };
   private genericValidator: GenericValidator;
-  constructor(private formBuilder: FormBuilder,private tourservice:TourinfoService,private router: Router,private route:ActivatedRoute) {
+  constructor(private formBuilder: FormBuilder,private tourservice:TourinfoService,private router: Router,private _route:ActivatedRoute) {
 
     this.validationMessages = {
       startDate:{
@@ -57,9 +58,10 @@ export class TourinfoEditComponent implements OnInit, AfterViewInit, OnDestroy {
       hotel:'',
 	    statusof:['',Validators.required],
       
+    
 
     })
-   
+  
 
   }
   get endDate() { 
@@ -67,7 +69,7 @@ export class TourinfoEditComponent implements OnInit, AfterViewInit, OnDestroy {
   }
   
   onSubmit(){
-    this.tourservice.updateUser(this.tourInfoForm.value).subscribe(
+    this.tourservice.updatepackages(this.tourInfoForm.value).subscribe(
       data=>{
         if(data.status==200){
           alert('Updated Successfully');

@@ -29,8 +29,8 @@ export class TourinfoListComponent implements OnInit {
   }
   performFilter(filterBy:string): ITourInfo[] {
     filterBy = filterBy.toLocaleLowerCase();
-    return this.tourinfo.filter((product :ITourInfo) =>
-    product.packageName.toLocaleLowerCase().includes(filterBy));
+    return this.tourinfo.filter((t:ITourInfo) =>
+    t.packageName.toLocaleLowerCase().includes(filterBy));
     }
    
   getAllPackages(){

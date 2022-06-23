@@ -27,7 +27,10 @@ import { TourinfoListComponent } from './tourinfo-list/tourinfo-list.component';
 import { TokenInterceptor } from './core/interceptor';
 import { ApiService } from './core/api.service';
 import { EditTourInformationSystemComponent } from './edit-tour-information-system/edit-tour-information-system.component';
-//import { RegisterComponent } from './register/register.component';
+import { RouterModule } from '@angular/router';
+import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
+import { StaffDashboardComponent } from './staff-dashboard/staff-dashboard.component';
+
 
 
 
@@ -41,7 +44,6 @@ import { EditTourInformationSystemComponent } from './edit-tour-information-syst
     LoginComponent,
     EditTourInformationSystemComponent,
     CustomerComponent,
-    //RegisterComponent,
     AddUserComponent,
     EditUserComponent,
     ListUserComponent,
@@ -51,7 +53,10 @@ import { EditTourInformationSystemComponent } from './edit-tour-information-syst
     AddTourComponent,
     TourInformationSystemListComponent,
     CustomerTourListComponent,
-    TourinfoListComponent
+    TourinfoListComponent,
+    CustomerDashboardComponent,
+    StaffDashboardComponent
+   
    
    
 
@@ -60,7 +65,9 @@ import { EditTourInformationSystemComponent } from './edit-tour-information-syst
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
+   
   ],
   providers: [ApiService, {provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptor,
