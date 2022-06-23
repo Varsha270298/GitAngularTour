@@ -1,9 +1,11 @@
+<app-admin-dashboard></app-admin-dashboard>
+
 <div class="col-md-6 user-container">
     <h2 class="text-center">Edit Package Detils</h2>
     <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
       <div class="hidden">
         <label for="packageId">Package ID:</label>
-        <input type="number" formControlName="packageId" placeholder="Enter Package Id" name="packageId" class="form-control" id="id">
+        <input type="number" formControlName="packageId" placeholder="Enter Package Id" name="packageId" class="form-control" id="packageId">
       </div>
       <div class="form-group">
         <label for="packageName">Package Name:</label>

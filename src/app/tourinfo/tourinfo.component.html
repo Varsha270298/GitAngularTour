@@ -8,6 +8,7 @@
                 <table class="table table-striped">
                     <thead class="thead-dark">
                         <tr>
+                            <th>Id</th>
                             <th>PackageName</th>
                             <th>NoofPersons</th>
                             <th>NoOfdays</th>
@@ -22,8 +23,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let t of tourinfo">
-                            <td>{{t.packageName}}></td>
+                        <tr>
+                            <td>{{t.reserevdPackageId}}</td>
+                            <td>  
+                                <a [routerLink]="['/tourinfo', t.reserevdPackageId]">{{t.packageName}}</a>
+                            
+                            </td>
                             <td>{{t.noOfPersons}}></td>
                             <td>{{t.numberOfDays}}</td>
                             <td>{{t.modeOfTransportation}}></td>
@@ -31,12 +36,12 @@
                             <td>{{t.startDate}}</td>
                             <td>{{t.endDate}}></td>
                             <td>{{t.amountPerPerson}}</td>
-                            <td>{{t.paymode}}</td>
-                            <td>{{t.statusof}}</td>
+                            <td>{{t.payMode}}</td>
+                            <td>{{t.status}}</td>
                             <td>{{t.confirm}}</td>
                             <td>
-                                <button class="btn btn-outline-primary btn-sm" routerLinkActive='active'
-                                        [routerLink]="['/tourinfo-edit', 'edit']">
+                             <button  class="btn btn-outline-primary btn-sm" (click)="editPackage(t)">
+                                       
                                   Edit
                                 </button>
                               </td>

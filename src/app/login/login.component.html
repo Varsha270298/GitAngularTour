@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 33bfac33becbfb2b5aa454c8e64861c204564255
 <section class="vh-100 gradient-custom">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -40,13 +44,98 @@
 
 
             <div>
+<<<<<<< HEAD
               <p class="mb-0">Don't have an account?<a [routerLink]="['/register']" [routerLinkActive]="['active']"  class="text-white-50 fw-bold">Sign Up</a>
+=======
+              <p class="mb-0">Don't have an account?<a [routerLink]="['/addUser']" [routerLinkActive]="['active']"  class="text-white-50 fw-bold">Sign Up</a>
+>>>>>>> 33bfac33becbfb2b5aa454c8e64861c204564255
               </p>
             </div>
 
           </div>
+<<<<<<< HEAD
         </div>
       </div>
     </div>
   </div>
 </section>
+=======
+<<<<<<< HEAD
+          <!-- <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" required="required"/>
+          </div>
+          <div class="form-group">
+            <label class="form-remember">
+              <input type="checkbox"/>Remember Me
+            </label><a class="form-recovery" href="#">Forgot Password?</a>
+          </div>
+          <div class="form-group">
+            <button type="submit">Log In</button>
+          </div>
+          <div class="form-group">
+          
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="form-panel two">
+      <div class="form-header">
+        <h1>Register Account</h1>
+      </div>
+      <div class="form-content">
+        <form>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input id="username" type="text" name="username" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="cpassword">Confirm Password</label>
+            <input id="cpassword" type="password" name="cpassword" required="required"/>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input id="email" type="email" name="email" required="required"/>
+          </div>
+          <div class="form-group">
+            <button type="submit">Register</button>
+          </div>
+        </form>
+        </div>-->
+      </div> 
+    </div>
+  </div>
+  </div>
+</section>
+=======
+        </div>
+=======
+<div class="row">
+
+  <div class="col-md-6 login-container">
+    <h2 style="margin: auto">Login </h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">UserName:</label>
+        <input type="text" class="form-control" formControlName="username" id="username" autocomplete="off">
+        <div class="error" *ngIf="loginForm.controls['username'].hasError('required') && loginForm.controls['username'].touched">Username is required</div>
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" formControlName="password" id="pwd" autocomplete="off">
+        <div class="error" *ngIf="loginForm.controls['password'].hasError('required') && loginForm.controls['password'].touched">Password is required</div>
+      </div>
+      <button class="btn btn-success" [disabled]="loginForm.invalid">Login</button>
+      <div *ngIf="invalidLogin" class="error">
+        <div>Invalid credentials.</div>
+>>>>>>> 5771fc3d5119f3a3706edfbdd34db01eb823cbf6
+      </div>
+    </form>
+  </div>
+</div>
+>>>>>>> 6f6bcd82fb43321b97336fd510e4b3c914e4d855
+>>>>>>> 33bfac33becbfb2b5aa454c8e64861c204564255
