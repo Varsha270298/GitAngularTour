@@ -20,39 +20,20 @@ const routes: Routes =[
 {path:'tourinfo-edit',component:TourinfoEditComponent },
 {path:'customer',component:CustomerComponent},
 {path:'login',component:LoginComponent},
-<<<<<<< HEAD
 
-
-
-{ path: 'edittour', component:EditTourInformationSystemComponent },
-
-=======
 { path: 'edittour', component:EditTourInformationSystemComponent },
 { path: 'listtour', component: TourInformationSystemListComponent},
 { path: 'CustTourList', component:CustomerTourListComponent },
 { path: 'restourlist', component:TourinfoListComponent },
-{ path: 'edittour', component:EditTourInformationSystemComponent },
->>>>>>> fd96caaea06dcef62b13f226b5d40f295b1457fe
 { path: 'add-user', component: AddUserComponent },
 { path: 'list-user', component: ListUserComponent },
 { path: 'edit-user', component: EditUserComponent },
 //{path:'register', component:RegisterComponent},
-<<<<<<< HEAD
 
-{ path: 'listtour', component: TourInformationSystemListComponent},
-{ path: 'edittour', component:EditTourInformationSystemComponent },
-{path:'viewtour',component:TourInformationSystemListComponent},
 
-{ path: 'listtour', component: TourInformationSystemListComponent},
-
-=======
-{path:'viewtour',component:TourInformationSystemListComponent},
->>>>>>> fd96caaea06dcef62b13f226b5d40f295b1457fe
 
 ];
-  
-
-@NgModule({
+  @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
