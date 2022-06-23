@@ -1,10 +1,10 @@
-<!--<div class="col-md-6 user-container">
+<div class="col-md-6 user-container">
     <h2 style="margin: auto"> Package Details</h2>
 
-    <table class="table table-striped", border="2">
+    <table class="table table-striped" border="5">
       <thead>
       <tr>
-        <th class="hidden">Id</th>
+  
         <th>Package Id</th>
         <th>Package Name</th>
         <th>Description</th>
@@ -15,17 +15,17 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let package of Packages">
-        <td class="hidden">{{user.id}}</td>
-        <td>{{package.packageId}}</td>
-        <td>{{package.packageName}}</td>
-        <td>{{package.description}}</td>
-        <td>{{package.numberOfDays}}</td>
-        <td>{{package.amountPerPerson}}</td>
-        <td>{{package.modeOfTransportation}}</td>
-        <td>{{package.hotel}}</td>
+      <tr *ngFor="let t of tours">
+    
+        <td>{{t.packageId}}</td>
+        <td>{{t.packageName}}</td>
+        <td>{{t.description}}</td>
+        <td>{{t.numberOfDays}}</td>
+        <td>{{t.amountPerPerson}}</td>
+        <td>{{t.modeOfTransportation}}</td>
+        <td>{{t.hotel}}</td>
       </tr>
       </tbody>
     </table>
-  </div> ! -->
+  </div> 
   
