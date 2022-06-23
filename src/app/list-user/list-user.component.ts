@@ -1,11 +1,22 @@
+<<<<<<< HEAD
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiService } from '../core/api.service';
+import { User } from '../model/user.model';
+
+@Component({
+  // selector: 'app-list-user',
+=======
 import { Component, OnInit , Inject} from '@angular/core';
 import {Router} from "@angular/router";
 
 import {ApiService} from "../core/api.service";
-import { User } from '../core/model/user.model';
+import { User } from '../model/user.model';
+//import { User } from '../core/model/user.model';
 
 @Component({
   selector: 'app-list-user',
+>>>>>>> 33bfac33becbfb2b5aa454c8e64861c204564255
   templateUrl: './list-user.component.html',
   styleUrls: ['./list-user.component.css']
 })
@@ -42,4 +53,8 @@ export class ListUserComponent implements OnInit {
   addUser(): void {
     this.router.navigate(['add-user']);
   };
+<<<<<<< HEAD
+
+=======
+>>>>>>> 33bfac33becbfb2b5aa454c8e64861c204564255
 }

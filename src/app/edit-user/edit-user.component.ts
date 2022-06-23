@@ -4,7 +4,12 @@ import {Router} from "@angular/router";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {first} from "rxjs/operators";
 import {ApiService} from "../core/api.service";
-import { User } from '../core/model/user.model';
+import { User } from '../model/user.model';
+<<<<<<< HEAD
+//import { User } from '../core/model/user.model';
+=======
+
+>>>>>>> 33bfac33becbfb2b5aa454c8e64861c204564255
 
 @Component({
   selector: 'app-edit-user',
@@ -27,11 +32,13 @@ export class EditUserComponent implements OnInit {
     this.editForm = this.formBuilder.group({
       id: [''],
       username: ['', Validators.required],
-      //firstName: ['', Validators.required],
-      //lastName: ['', Validators.required],
-      //age: ['', Validators.required],
-      //salary: ['', Validators.required]
+<<<<<<< HEAD
+      role:['',Validators.required]
+     
+=======
+      
       role: ['', Validators.required]
+>>>>>>> 33bfac33becbfb2b5aa454c8e64861c204564255
     });
     this.apiService.getUserById(+userId)
       .subscribe( data => {
@@ -56,4 +63,8 @@ export class EditUserComponent implements OnInit {
         });
   }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 33bfac33becbfb2b5aa454c8e64861c204564255

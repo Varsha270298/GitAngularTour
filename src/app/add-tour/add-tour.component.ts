@@ -34,6 +34,7 @@ export class AddTourComponent implements OnInit {
      
       // .subscribe( data =>this.message=data);
       .subscribe( data => {
+        console.log('Submitted');
         this.router.navigate(['listtour']);
       });
   }
