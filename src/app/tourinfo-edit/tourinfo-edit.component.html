@@ -1,0 +1,117 @@
+<div class="card">
+    <div class="card-header">
+        {{title}}
+    </div>
+    <div class="card-body">
+        <form novalidate  [formGroup]="tourInfoForm"  (ngSubmit)="onSubmit()">
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="packagename">PacakageName :</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="pId" type="text" formControlName="packageName" readonly>
+                </div>
+            </div>
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="description">Description :</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="description" type="text" formControlName="description" readonly>
+                </div>
+            </div>
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="startDate">StartDate:</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="sdate" type="date" formControlName="startDate" required>
+                    <!-- [ngClass]="{'is-invalid':displayMessage.startDate]}"/>
+                    <span class="invalid-feedback">
+                        {{displayMessage.startDate}}
+                      </span> -->
+                </div>
+            </div>
+                 <div class="form-group row mb-2">
+                    <label class="col-md-2 col-form-label" for="endDate"> EndDate:</label>
+                    <div class="col-md-8">
+                        <input class="form-control" id="edate" type="date" formControlName="endDate" required>
+                        <div *ngIf="(endDate?.dirty || endDate?.touched)"
+               class="alert alert-danger">
+
+         <div *ngIf="endDate?.errors?.['required']">
+          EndDate is required.
+          </div>
+           </div>
+                        
+                     </div>
+               </div>
+               <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="noOfPersons">NoOfPersons:</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="NoofPersons" type="number" formControlName="noOfPersons" required>
+                    
+                    
+                 </div>
+           </div>
+           <div class="form-group row mb-2">
+            <label class="col-md-2 col-form-label" for="numberOfDays">NumberOfDays:</label>
+            <div class="col-md-8">
+                <input class="form-control" id="numberOfDays" type="number" formControlName="numberOfDays" readonly>
+            </div>
+       </div>
+       
+   <div class="form-group row mb-2">
+    <label class="col-md-2 col-form-label" for="amountPerPerson">AmountPerPerson:</label>
+    <div class="col-md-8">
+        <input class="form-control" id="amountPerPerson" type="int" formControlName="amountPerPerson" readonly>
+    </div>
+</div>
+<div class="form-group row mb-2">
+    <label class="col-md-2 col-form-label" for="Transportation">ModeOfTransportation:</label>
+    <div class="col-md-8">
+        <input class="form-control" id="Transportation" type="text" formControlName="modeOfTransportation" readonly>
+    </div>
+</div>
+<div class="form-group row mb-2">
+    <label class="col-md-2 col-form-label" for="payment">Paymode:</label>
+    <div class="col-md-8">
+        <input class="form-control" id="payment" type="text" formControlName="paymode" required>
+    </div>
+</div>
+<div class="form-group row mb-2">
+    <label class="col-md-2 col-form-label" for="confirm">paymentConformation:</label>
+    <div class="col-md-8">
+        <input class="form-control" id="confirm" type="text" formControlName="confirm" required>
+    </div>
+</div>
+<div class="form-group row mb-2">
+    <label class="col-md-2 col-form-label" for="hotel">Hotel:</label>
+    <div class="col-md-8">
+        <input class="form-control" id="hotel" type="text" formControlName="hotel" readonly>
+    </div>
+</div>
+<div class="form-group row mb-2">
+    <label class="col-md-2 col-form-label" for="statusof">Statusof:</label>
+    <div class="col-md-8">
+        <input class="form-control" id="statusof" type="text" formControlName="statusof" readonly>
+    </div>
+</div>
+
+<div class="form-group row mb-2">
+    <div class="offset-md-2 col-md-4">
+      <button class="btn btn-primary mr-3"
+              style="width:80px;"
+              type="submit"
+              [title]="tourInfoForm.valid ? 'Save your entered data' : 'Disabled until the form data is valid'"
+              [disabled]="!tourInfoForm.valid">
+        Save
+      </button>
+      <button class="btn btn-outline-secondary mr-3"
+      style="width:80px;"
+      type="button"
+      title="Cancel your edits"
+      routerLinkActive="active"
+      [routerLink]="['/tourinfo']">
+      Cancel
+     </button>
+      </div>
+      </div>
+     
+    </form>
+    </div>
+</div>
