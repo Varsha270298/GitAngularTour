@@ -16,7 +16,7 @@ export class AddUserComponent implements OnInit {
 
   ngOnInit() {
     this.addForm = this.formBuilder.group({
-      id: [],
+      //id: [],
       username: ['', Validators.required],
       password: ['', Validators.required],
       role:['',Validators.required]

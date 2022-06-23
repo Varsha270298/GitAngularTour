@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from '../core/api.service';
-import { User } from '../core/model/user.model';
+import { User } from '../model/user.model';
+//import { User } from '../core/model/user.model';
 
 @Component({
   selector: 'app-login',
@@ -28,8 +29,10 @@ export class LoginComponent implements OnInit {
       //debugger;
       if(data.status === 200) {
         window.localStorage.setItem('token', data.result.token);
-       // this.router.navigate(['list-user']);
+       //this.router.navigate(['list-user']);
+       console.log(data.result.username);
        this.getUser(data.result.username);
+       
 
       }else {
         this.invalidLogin = true;
@@ -46,15 +49,21 @@ export class LoginComponent implements OnInit {
     });
   }
    getUser(name:string) {
-    this.apiService.getUsername(name).subscribe((data:any)=>{this.user=data;
-
-      if(this.user.role==='CUSTOMER')
-      this.router.navigate(['customer-dashboard'])
-      else if(this.user.role==='ADMIN')
-      this.router.navigate(['admin-dashboard'])
-      }
-    )
+    this.apiService.getUsername(name).subscribe(data=>{this.user=data;
+    console.log(data.result.role);
+    if(data.result.role==='USER')
+    this.router.navigate(['listtour'])
+   });
+      // (data:User)=>{this.user=data;
     
+     // if(this.user.role==='USER')
+       //this.router.navigate(['listtour'])
+      // else if(this.user.role==='ADMIN')
+      // this.router.navigate(['admin-dashboard'])
 
+      }
+    
 }
-}
+
+
+
