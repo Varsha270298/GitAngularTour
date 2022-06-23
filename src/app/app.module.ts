@@ -1,11 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EditTourInformationSystemComponent } from './edit-tour-information-system/edit-tour-information-system.component';
-import { CustomerComponent } from './customer/customer.component';
 import { LoginComponent } from './login/login.component';
+<<<<<<< HEAD
+=======
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminAddService } from './admin-add.service';
 import { AddTourComponent } from './add-tour/add-tour.component';
@@ -21,13 +23,16 @@ import { ListUserComponent } from './list-user/list-user.component';
 =======
 import { TourInformationSystemListComponent } from './tour-information-system-list/tour-information-system-list.component';
 >>>>>>> eeb72d4408782f74d271a4f6b08c826ced11702a
+>>>>>>> af479dc9a738557c6c854ee858ea5acc613fb706
 
-
-  
 
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
+    LoginComponent,
+  
+=======
     EditTourInformationSystemComponent,
     CustomerComponent,
     //RegisterComponent,
@@ -41,13 +46,11 @@ import { TourInformationSystemListComponent } from './tour-information-system-li
     TourInformationSystemListComponent
    
    
+>>>>>>> af479dc9a738557c6c854ee858ea5acc613fb706
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

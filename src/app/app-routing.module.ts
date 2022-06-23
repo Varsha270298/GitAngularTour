@@ -23,6 +23,12 @@ const routes: Routes =[
 {path:'tourinfo-edit',component:TourinfoEditComponent },
 {path:'customer',component:CustomerComponent},
 {path:'login',component:LoginComponent},
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> f601aa20b10c18d0d60e01641b3c789ffe97d245
 { path: 'edittour', component:EditTourInformationSystemComponent },
 <<<<<<< HEAD
 =======
@@ -33,16 +39,22 @@ const routes: Routes =[
 //{path:'register', component:RegisterComponent},
 =======
 <<<<<<< HEAD
-{ path: 'listtour', component: TourInformationSystemListComponent},
-=======
-
-{path:'viewtour',component:TourInformationSystemListComponent},
-
 >>>>>>> af479dc9a738557c6c854ee858ea5acc613fb706
 { path: 'listtour', component: TourInformationSystemListComponent},
+{ path: 'edittour', component:EditTourInformationSystemComponent },
+{path:'viewtour',component:TourInformationSystemListComponent},
 
+<<<<<<< HEAD
+>>>>>>> af479dc9a738557c6c854ee858ea5acc613fb706
+{ path: 'listtour', component: TourInformationSystemListComponent},
+=======
+>>>>>>> f601aa20b10c18d0d60e01641b3c789ffe97d245
+
+<<<<<<< HEAD
+=======
 >>>>>>> d9aa65ae13c5fe382a03413276c81756c94e6ade
 >>>>>>> eeb72d4408782f74d271a4f6b08c826ced11702a
+>>>>>>> af479dc9a738557c6c854ee858ea5acc613fb706
 
 ]
   
