@@ -1,11 +1,17 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+<<<<<<< HEAD
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+=======
+
+>>>>>>> 42cab10d1ac19153643f048403f1270bffd41e5e
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EditTourInformationSystemComponent } from './edit-tour-information-system/edit-tour-information-system.component';
-import { CustomerComponent } from './customer/customer.component';
 import { LoginComponent } from './login/login.component';
+<<<<<<< HEAD
+=======
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminAddService } from './admin-add.service';
 import { AddTourComponent } from './add-tour/add-tour.component';
@@ -20,13 +26,22 @@ import { ApiService } from './core/api.service';
 //import { RegisterComponent } from './register/register.component';
 
 
+<<<<<<< HEAD
+=======
+=======
+import { TourInformationSystemListComponent } from './tour-information-system-list/tour-information-system-list.component';
+>>>>>>> eeb72d4408782f74d271a4f6b08c826ced11702a
+>>>>>>> af479dc9a738557c6c854ee858ea5acc613fb706
+>>>>>>> 42cab10d1ac19153643f048403f1270bffd41e5e
 
-
-  
 
 @NgModule({
   declarations: [
     AppComponent,
+<<<<<<< HEAD
+    LoginComponent,
+  
+=======
     EditTourInformationSystemComponent,
     CustomerComponent,
     //RegisterComponent,
@@ -40,13 +55,11 @@ import { ApiService } from './core/api.service';
     TourInformationSystemListComponent
    
    
+>>>>>>> af479dc9a738557c6c854ee858ea5acc613fb706
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
   ],
   providers: [ApiService, {provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptor,
