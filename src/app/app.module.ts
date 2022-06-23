@@ -11,6 +11,17 @@ import { AdminAddService } from './admin-add.service';
 import { AddTourComponent } from './add-tour/add-tour.component';
 import { TourinfoComponent } from './tourinfo/tourinfo.component';
 import { TourinfoEditComponent } from './tourinfo-edit/tourinfo-edit.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { ListUserComponent } from './list-user/list-user.component';
+
+import { ApiResponse } from './api.response';
+import { CustomerListComponent } from './customer-list/customer-list.component';
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
+
+
 
 
   
@@ -19,18 +30,27 @@ import { TourinfoEditComponent } from './tourinfo-edit/tourinfo-edit.component';
   declarations: [
     AppComponent,
     EditTourInformationSystemComponent,
-    CustomerComponent,
+    HomeComponent,
+    UpdateCustomerComponent,
+    ListUserComponent,
+    CustomerListComponent,
+    //CustomerComponent,
+    RegisterComponent,
+    AddUserComponent,
+    EditUserComponent,
+    ListUserComponent,
     LoginComponent,
     TourinfoComponent,
     TourinfoEditComponent,
     AddTourComponent,
+  
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
   ],
   providers: [],
