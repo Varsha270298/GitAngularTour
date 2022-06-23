@@ -10,7 +10,7 @@ import { TourinfoService } from './tourinfo.service';
   styleUrls: ['./tourinfo.component.css']
 })
 export class TourinfoComponent implements OnInit {
-  tour!:ITourInfo;
+  
   title:string="ReserevedPacakges";
   t!:ITourInfo;
   sub!:Subscription;

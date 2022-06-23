@@ -9,6 +9,7 @@ import {Tour} from '../tour'
   styleUrls: ['./tour-information-system-list.component.css']
 })
 export class TourInformationSystemListComponent implements OnInit {
+  
   constructor(private router: Router, private apiService: AdminAddService) { }
   tours!: Tour[];
 
