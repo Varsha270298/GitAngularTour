@@ -9,11 +9,7 @@ import {Tour} from '../tour'
   styleUrls: ['./tour-information-system-list.component.css']
 })
 export class TourInformationSystemListComponent implements OnInit {
-  packages!: Tour[];
   constructor(private router: Router, private apiService: AdminAddService) { }
-
-  
-
   tours!: Tour[];
 
   ngOnInit(): void {
