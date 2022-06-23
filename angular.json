@@ -26,7 +26,11 @@
               "src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
+<<<<<<< HEAD
             "scripts": [ "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+=======
+            "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.min.js",
+>>>>>>> 7eba1d887763ba60ac47b20a9478ea393b162346
               "./node_modules/jquery/dist/jquery.min.js"]
           },
           "configurations": {
@@ -101,6 +105,10 @@
     }
   },
   "cli": {
+<<<<<<< HEAD
     "analytics": false
+=======
+    "analytics": "4437895e-85bf-41ba-ba2d-40bc7215a386"
+>>>>>>> 7eba1d887763ba60ac47b20a9478ea393b162346
   }
 }
