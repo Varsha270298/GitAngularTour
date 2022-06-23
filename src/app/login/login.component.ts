@@ -28,8 +28,8 @@ export class LoginComponent implements OnInit {
       //debugger;
       if(data.status === 200) {
         window.localStorage.setItem('token', data.result.token);
-       this.router.navigate(['list-user']);
-       //this.getUser(data.result.username);
+       //this.router.navigate(['list-user']);
+       this.getUser(data.result.username);
 
       }else {
         this.invalidLogin = true;
