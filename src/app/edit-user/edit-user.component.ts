@@ -4,7 +4,8 @@ import {Router} from "@angular/router";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {first} from "rxjs/operators";
 import {ApiService} from "../core/api.service";
-import { User } from '../core/model/user.model';
+import { User } from '../model/user.model';
+
 
 @Component({
   selector: 'app-edit-user',
@@ -27,10 +28,7 @@ export class EditUserComponent implements OnInit {
     this.editForm = this.formBuilder.group({
       id: [''],
       username: ['', Validators.required],
-      //firstName: ['', Validators.required],
-      //lastName: ['', Validators.required],
-      //age: ['', Validators.required],
-      //salary: ['', Validators.required]
+      
       role: ['', Validators.required]
     });
     this.apiService.getUserById(+userId)

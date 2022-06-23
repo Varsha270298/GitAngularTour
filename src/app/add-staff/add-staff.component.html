@@ -1,0 +1,53 @@
+<div class="container_form">
+  <form [formGroup]="staffForm" (ngSubmit)="onSubmit()">
+    <div class="input_container">
+      <!-- <label for="userId">UserID </label> -->
+      <input type="text" id="userId" name="userId" formControlName="userId" placeholder="User Id">
+      <div *ngIf="!userId?.valid && (userId?.dirty || userId?.touched)">
+        <div class="error_message" [hidden]="!userId?.errors?.['required']">
+          userId is required
+        </div>
+      </div>
+    </div>
+  
+  
+    <div class="input_container">
+      <!-- <label for="password">Password </label> -->
+      <input type="password" id="password" name="password" formControlName="password" placeholder="Enter Password">
+      <div *ngIf="!password?.valid && (password?.dirty || password?.touched)">
+        <div class="error_message" [hidden]="!password?.errors?.['required']">
+          Password is required
+        </div>
+      </div>
+    </div>
+  
+    <!-- <div class="input_container"> -->
+      <!-- <label for="Status">Status </label> -->
+      <!-- <input type="text" id="status" name="status" formControlName="status" placeholder="Enter Status"> -->
+      <!-- <div *ngIf="!status?.valid && (status?.dirty || status?.touched)"> -->
+        <!-- <div class="error_message" [hidden]="!status?.errors?.['required']"> -->
+          <!-- status is required -->
+        <!-- </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  
+    <!-- <div class="input_container"> -->
+      <!-- <label for="reservePackageId">reservePackageId </label> -->
+      <!-- <input type="text" id="reservePackageId" name="reservePackageId" formControlName="reservePackageId" placeholder="Reserve PackageID"> -->
+      <!-- <div *ngIf="!reservePackageId?.valid && (reservePackageId?.dirty || reservePackageId?.touched)"> -->
+        <!-- <div class="error_message" [hidden]="!reservePackageId?.errors?.['required']">
+          ReservePackageId is required -->
+        <!-- </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="input_container">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Remember me</label>
+    </div> -->
+
+    <div class="input_container">
+      <button type="button" class="form_button btn btn-secondary btn-sm">Add Staff</button>
+    </div>
+  </form>
+</div>
