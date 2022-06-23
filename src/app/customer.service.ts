@@ -9,8 +9,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CustomerService {
   getAllTours():Observable<any[]> 
-  { return  this.http.get("http://localhost:9090/GitAngularTour/rest/TourInformationSystem").
+  {
+     return  this.http.get("http://localhost:9090/GitAngularTour/rest/TourInformationSystem").
     
-      }
+}
+    
   constructor(private http:HttpClient) { }
 }

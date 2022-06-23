@@ -11,6 +11,12 @@ import { AdminAddService } from './admin-add.service';
 import { AddTourComponent } from './add-tour/add-tour.component';
 import { TourinfoComponent } from './tourinfo/tourinfo.component';
 import { TourinfoEditComponent } from './tourinfo-edit/tourinfo-edit.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { ListUserComponent } from './list-user/list-user.component';
+//import { RegisterComponent } from './register/register.component';
+
+
 
 
   
@@ -20,10 +26,15 @@ import { TourinfoEditComponent } from './tourinfo-edit/tourinfo-edit.component';
     AppComponent,
     EditTourInformationSystemComponent,
     CustomerComponent,
+    //RegisterComponent,
+    AddUserComponent,
+    EditUserComponent,
+    ListUserComponent,
     LoginComponent,
     TourinfoComponent,
     TourinfoEditComponent,
     AddTourComponent,
+   
    
   ],
   imports: [

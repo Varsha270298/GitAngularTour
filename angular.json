@@ -26,18 +26,8 @@
               "src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-<<<<<<< HEAD
             "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.min.js",
               "./node_modules/jquery/dist/jquery.min.js"]
-=======
-          
-              
-        
-            "scripts": [
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "./node_modules/jquery/dist/jquery.min.js"
-            ]
->>>>>>> 0b4741ba3c3eb5a5de89a0c24ae5db6f9eb1cd5e
           },
           "configurations": {
             "production": {
