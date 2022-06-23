@@ -1,11 +1,12 @@
 
  
- <nav class='navbar navbar-expand navbar-light bg-light'>
+  <nav class='navbar navbar-expand navbar-light bg-light'>
   <a class='navbar-brand'>{{title}}</a>
   <ul class='nav nav-pills'>
     <li><a class='nav-link' routerLinkActive='active' routerLink='/listtour'>Tour Packages</a></li>
     <li><a class='nav-link' routerLinkActive='active' routerLink='/edittour'>Edit Tour</a></li>
     <li><a class='nav-link' routerLinkActive='active' routerLink='/addtour'>Add Tour</a></li>
+    <li><a class='nav-link' routerLinkActive='active' routerLink='/login'>Login</a></li>
   </ul>
 </nav>
  
@@ -13,13 +14,27 @@
 <nav class='navbar navbar-expand navbar-light bg-light'>
     <a class='navbar-brand'>{{title}}</a>
     <ul class='nav nav-pills'>
+
+
+      <li><a class='nav-link' routerLinkActive='active' routerLink='/tourinfo'>reservedtourpackages</a></li>
+      <li><a class='nav-link' routerLinkActive='active' routerLink='/tourinfo-edit'>Edit</a></li>
+      <li><a class='nav-link' routerLinkActive='active' routerLink='/login'>Login</a></li>
       <li><a class='nav-link' [routerLinkActive]="['active']" [routerLink]="['tourinfo']">reservedtourpackages</a></li>
       <li><a class='nav-link' [routerLink]="['/addtour']" [routerLinkActive]="['active']">add package</a> </li>
+
       <li><a class='nav-link' [routerLink]="['/login']" [routerLinkActive]="['active']">Login</a> </li>
       <li><a class='nav-link' [routerLink]="['/CustTourList']" [routerLinkActive]="['active']">Tour Packages</a> </li>
       <li><a class='nav-link' [routerLink]="['/restourlist']" [routerLinkActive]="['active']">Reserved Tour List</a> </li>
+
     </ul>
 </nav>
 <div class='container'>
+
+
+ 
+    <a   routerLinkActive='active' routerLink='/login'>Login</a> -->
+ <!-- <app-login></app-login> -->
 <router-outlet></router-outlet>
+</div> 
 </div>
+

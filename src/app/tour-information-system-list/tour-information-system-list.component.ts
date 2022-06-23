@@ -11,9 +11,6 @@ import {Tour} from '../tour'
 export class TourInformationSystemListComponent implements OnInit {
   
   constructor(private router: Router, private apiService: AdminAddService) { }
-
-  
-
   tours!: Tour[];
 
   ngOnInit(): void {

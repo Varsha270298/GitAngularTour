@@ -1,4 +1,9 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ApiService } from '../core/api.service';
+import { User } from '../core/model/user.model';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +11,50 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+   user!:User;
+  loginForm!: FormGroup;
+  invalidLogin: boolean = false;
+  constructor(private formBuilder: FormBuilder, private router: Router, private apiService: ApiService) { }
 
-  constructor() { }
+  onSubmit() {
+    if (this.loginForm.invalid) {
+      return;
+    }
+    const loginPayload = {
+      username: this.loginForm.controls['username'].value,
+      password: this.loginForm.controls['password'].value
+    }
+    this.apiService.login(loginPayload).subscribe((data:any)=>{
+      //debugger;
+      if(data.status === 200) {
+        window.localStorage.setItem('token', data.result.token);
+       //this.router.navigate(['list-user']);
+       this.getUser(data.result.username);
 
-  ngOnInit(): void {
+      }else {
+        this.invalidLogin = true;
+        alert(data.message);
+      }
+    });
   }
 
+  ngOnInit() {
+    window.localStorage.removeItem('token');
+    this.loginForm = this.formBuilder.group({
+      username: ['', Validators.compose([Validators.required])],
+      password: ['', Validators.required]
+    });
+  }
+   getUser(name:string) {
+    this.apiService.getUsername(name).subscribe((data:any)=>{this.user=data;
+
+      if(this.user.role==='CUSTOMER')
+      this.router.navigate(['customer-dashboard'])
+      else if(this.user.role==='ADMIN')
+      this.router.navigate(['admin-dashboard'])
+      }
+    )
+    
+
+}
 }
