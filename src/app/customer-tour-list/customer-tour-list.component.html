@@ -1,5 +1,5 @@
 <div class="col-md-6 user-container">
-    <h2 style="margin: auto"> Package Details</h2>
+    <h2 style="margin: auto">Package Details</h2>
 
     <table class="table table-striped" border="5">
       <thead>
@@ -24,9 +24,29 @@
         <td>{{t.amountPerPerson}}</td>
         <td>{{t.modeOfTransportation}}</td>
         <td>{{t.hotel}}</td>
+        <td><input type="checkbox"></td>
         
       </tr>
+      <div class="form-group row mb-2">
+        <div class="offset-md-2 col-md-4">
+      <select style="width: 100px;">
+        <option>Cash</option>
+        <option>Upi</option>
+      </select>
+        </div>
+      </div>
+      <div class="form-group row mb-2">
+        <div class="offset-md-2 col-md-4">
+              <button class="btn btn-primary mr-3"
+                  style="width:200px;"
+                  type="submit" (click)="Booking()" >
+                 
+            Confirm Package
+          </button>
+          
+          </div>
+          </div>
       </tbody>
     </table>
-  </div> 
+    </div> 
   

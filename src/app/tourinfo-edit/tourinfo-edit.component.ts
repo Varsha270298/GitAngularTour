@@ -71,7 +71,7 @@ export class TourinfoEditComponent implements OnInit, AfterViewInit, OnDestroy {
       data=>{
         if(data.status==200){
           alert('Updated Successfully');
-          this.router.navigate(['/tourInfo']);
+          this.router.navigate(['/tourinfo']);
         }
         else{
          alert(data.message);
@@ -81,7 +81,9 @@ export class TourinfoEditComponent implements OnInit, AfterViewInit, OnDestroy {
 
   }
   onCancel():void{
-    this.router.navigate(['/tourinfo']);
+    console.log('on cancel')
+  //  this.router.navigateByUrl('/tourinfo');
+   
   }
   ngAfterViewInit(): void {
     
