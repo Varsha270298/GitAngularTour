@@ -30,8 +30,6 @@ import { ApiService } from './core/api.service';
 
 import { CustomerTourListComponent } from './customer-tour-list/customer-tour-list.component';
 import { TourinfoListComponent } from './tourinfo-list/tourinfo-list.component';
-
-
 import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
 import { StaffDashboardComponent } from './staff-dashboard/staff-dashboard.component';
 
@@ -44,7 +42,7 @@ import { LoginComponent } from './login/login.component';
 
 
 
-
+//import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -80,15 +78,19 @@ CustomerEditComponent,
     TourinfoComponent,
     TourinfoEditComponent,
     AddTourComponent,
-
+    TourInformationSystemListComponent,
+    CustomerTourListComponent,
+    TourinfoListComponent
+   
   ],
+  
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
   ],
    
   
