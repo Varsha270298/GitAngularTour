@@ -1,39 +1,31 @@
 
 
-<div class="container contact" style="margin-left: 25%;">
+<div class="container contact">
 	<div class="row">
-		<h1>Customer Sign Up</h1>
-        <form  [formGroup]="sampleForm" (ngSubmit)="display()"class="row g-3 needs-validation" novalidate>
+		<h1>Edit Customer</h1>
+        <form  [formGroup]="sampleForm" (ngSubmit)="update()"class="row g-3 needs-validation" novalidate>
             <div class="col-md-9">
                 <div class="contact-form">
                     <div class="form-group">
                     <label class="control-label col-sm-2" for="fname">First Name:</label>
                     <div class="col-sm-10">          
-                        <input type="text" class="form-control" id="fname" placeholder="Enter First Name" formControlName="firstName" name="fname" style="width: 41em;">
-                        <div *ngIf="!firstName?.valid && (firstName?.dirty || firstName?.touched)">
-                            <div [hidden]="!firstName?.errors?.['required']">
-                                First name is required
+                        <input type="text" class="form-control" id="fname" placeholder="Enter First Name" formControlName="firstName" name="fname">
                     </div>
-                        
+                    
                     </div>
                     <div class="form-group">
                     <label class="control-label col-sm-2" for="lname">Last Name:</label>
                     <div class="col-sm-10">          
                         <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" formControlName="lastName"  name="lname">
-                        
                     </div>
                     </div>
                     <div class="form-group">
                     <label class="control-label col-sm-2" for="userId">User Id:</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="userId" placeholder="Enter EmailId" formControlName="userId"  name="userId">
+                        <input type="userId" class="form-control" id="userId" placeholder="Enter EmailId" formControlName="userId"  name="userId">
                     </div>
                     </div>
-                    <div class="form-check">
-                        <label for="gender">Gender : </label>
-                        <input class="radioclass"type="radio"  value="male" id="gender" formControlName="gender">Male
-                        <input class="radioclass"type="radio"  value="female" id="gender" formControlName="gender">Female
-                    </div>
+                   
                     <div class="form-check"style="display: flex;">
                         <div class="form-group" style="width: 40%">
                             <label class="control-label" for="lname">Age:</label>
@@ -91,12 +83,23 @@
 
                     <div class="form-group">        
                     <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary" >Update</button>
                 
                     </div>
                     </div>
+                    <div class="form-group">        
+                        <button class="btn btn-outline-warning"
+                        style="width:80px"
+                        type="button"
+                        title="Delete this product"
+                       >
+                  Delete
+                </button>
+                    
+                        </div>
                 </div>
             </div>
-        
+        </form>
 	</div>
 </div>
+

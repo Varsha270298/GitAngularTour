@@ -1,12 +1,10 @@
-import { Component, OnInit , Inject} from '@angular/core';
-import {Router} from "@angular/router";
-
-import {ApiService} from "../core/api.service";
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiService } from '../core/api.service';
 import { User } from '../model/user.model';
-//import { User } from '../core/model/user.model';
 
 @Component({
-  selector: 'app-list-user',
+  // selector: 'app-list-user',
   templateUrl: './list-user.component.html',
   styleUrls: ['./list-user.component.css']
 })

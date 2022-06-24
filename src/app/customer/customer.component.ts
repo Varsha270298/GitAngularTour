@@ -1,8 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-// import { ApiService } from '../core/api.service';
-import { Customer } from './customer';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent implements OnInit {
+
   sampleForm = new FormGroup({
     firstName:new FormControl('',Validators.required),
     lastName:new FormControl('',Validators.required),

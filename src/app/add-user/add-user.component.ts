@@ -16,14 +16,11 @@ export class AddUserComponent implements OnInit {
 
   ngOnInit() {
     this.addForm = this.formBuilder.group({
-      //id: [],
+      id: [],
       username: ['', Validators.required],
       password: ['', Validators.required],
       role:['',Validators.required]
-      // firstName: ['', Validators.required],
-      // lastName: ['', Validators.required],
-      // age: ['', Validators.required],
-      // salary: ['', Validators.required]
+      
     });
 
   }
@@ -31,7 +28,7 @@ export class AddUserComponent implements OnInit {
   onSubmit() {
     this.apiService.createUser(this.addForm.value)
       .subscribe( data => {
-        this.router.navigate(['list-user']);
+        this.router.navigate(['login']);
       });
   }
 
