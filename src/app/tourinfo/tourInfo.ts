@@ -1,6 +1,6 @@
 export interface ITourInfo{
 
- 
+	reserevdPackageId: number;
      packageName:string,
 	 description:string,
 	 startDate:string,
@@ -9,9 +9,9 @@ export interface ITourInfo{
 	 numberOfDays:number,
      amountPerPerson:number,
 	 modeOfTransportation:string,
-	  paymode:string,
-	 confirm:string,
+	  payMode:string,
+	  confirm:string,
       hotel:string,
-	  statusof:string,
+	  status:string,
 
 }

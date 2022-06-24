@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+}
+body {
+    background-color: powderblue;
+}
+.container_form {
+    /* background-image: url('../../assets/images/bus.jpg'); */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+    background-position: center;
+    background-color: beige;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    width: 300px;
+    border-radius: 5px;
+    background-color: rgba(230, 243, 255, .5);
+    -webkit-box-shadow: 18px 3px 47px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 18px 3px 47px 4px rgba(0,0,0,0.75);
+    box-shadow: 18px 3px 47px 4px rgba(0,0,0,0.75);
+
+}
+.input_container {
+    margin: 25px 20px;
+    text-align: center;
+}
+input {
+    width: 100%;
+    padding: 10px 5px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid gold;
+    /* border-radius: 5px; */
+}
+input:focus {
+    border: 1px solid gold;
+}
+.form_button {
+    padding: 10px 15px;
+    transition: .5s;
+}
+.form_button:hover {
+    transform: scale(1.1);
+}
+.error_message {
+    color: red;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 14px;
+}
+.custom_button {
+    width : 100px;
+    
+}

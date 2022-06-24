@@ -7,19 +7,23 @@ import { ITourInfo } from './tourInfo';
   providedIn: 'root'
 })
 export class TourinfoService {
-   private url='http://localhost:8282/Tour_Management/customer/resereveid';
-   private urlUpdate='http://localhost:8282/Tour_Management/customer/updatereservetour';
-   
+   private _url='http://localhost:8282/Tour_Management/customer/resereveid/';
+   private _urlUpdate='http://localhost:8282/Tour_Management/customer/updatereservetour';
+   private _urlGetAll='http://localhost:8282/Tour_Management/reservedpackages';
   constructor(private http: HttpClient) {}
   
   
   getReservedpackageById(id:number): Observable<any>{
-    return this.http.get<any>(this.url + id)
+    console.log(id);
+    return this.http.get<any>(this._url+id)
+    
   }
-  updateUser(tour:ITourInfo): Observable<any> {
-    return this.http.put<any>(this.urlUpdate,tour);
+  updatepackages(tour:ITourInfo): Observable<any> {
+    return this.http.put<any>(this._urlUpdate,tour);
   }
-  
+  getAllReservedPackages():Observable<any>{
+    return this.http.get<any>(this._urlGetAll);
+  }
   
   }
  
