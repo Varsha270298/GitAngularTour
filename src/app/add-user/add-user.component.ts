@@ -16,11 +16,7 @@ export class AddUserComponent implements OnInit {
 
   ngOnInit() {
     this.addForm = this.formBuilder.group({
-<<<<<<< HEAD
       id: [],
-=======
-      //id: [],
->>>>>>> 33bfac33becbfb2b5aa454c8e64861c204564255
       username: ['', Validators.required],
       password: ['', Validators.required],
       role:['',Validators.required]
@@ -32,7 +28,7 @@ export class AddUserComponent implements OnInit {
   onSubmit() {
     this.apiService.createUser(this.addForm.value)
       .subscribe( data => {
-        this.router.navigate(['list-user']);
+        this.router.navigate(['login']);
       });
   }
 

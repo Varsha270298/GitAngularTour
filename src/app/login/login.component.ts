@@ -72,9 +72,11 @@ export class LoginComponent implements OnInit {
     this.apiService.getUsername(name).subscribe(data=>{this.user=data;
     console.log(data.result.role);
     if(data.result.role==='USER')
-    this.router.navigate(['listtour'])
+    this.router.navigate(['customerdashboard'])
     else if(data.result.role==='ADMIN')
-    this.router.navigate(['edittour'])
+    this.router.navigate(['admindashboard'])
+    else if(data.result.role==='STAFF')
+    this.router.navigate(['staff'])
    });
    // (data:User)=>{this.user=data;
     
