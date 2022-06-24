@@ -54,22 +54,23 @@ const routes: Routes =[
 { path: 'add-user', component: AddUserComponent },
 { path: 'list-user', component: ListUserComponent },
 { path: 'edit-user', component: EditUserComponent },
+{path:'register', component:RegisterComponent},
+{path:'update-customer',component:UpdateCustomerComponent},
 {path:'', component:WelcomeTourComponent},
 {path:'admindashboard',component:AdminDashboardComponent },
 {path:'customerdashboard',component:CustomerDashboardComponent},
 {path:'customeredit', component:CustomerEditComponent},
+<<<<<<< HEAD
 {path:'staffdashboard', component:StaffDashboardComponent}
 
+=======
+{path:'staff', component:StaffDashboardComponent}
+>>>>>>> 782f62e4934b5d6487f6a5edeb5a949e08fbba8f
 
 ]
-
-
-
-
-  
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
-})
+    })
 export class AppRoutingModule { }

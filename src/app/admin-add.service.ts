@@ -13,9 +13,9 @@ export class AdminAddService {
 
    
   constructor(private http: HttpClient) { }
-   private url : string= "http://localhost:8282/Tour_Management/tour/addtour";
-   private updateUrl: string= "http://localhost:8282/Tour_Management/tour/edittour";
-    private listUrl: string= "http://localhost:8282/Tour_Management/tour";
+   private url : string= "http://localhost:8282/tour/addtour";
+   private updateUrl: string= "http://localhost:8282/tour/edittour";
+    private listUrl: string= "http://localhost:8282/tour";
   //  private updateUrl: string= "http://localhost:8282/Tour_Management/tour";
 
   
