@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from '../core/api.service';
+// import { AuthService } from '../services/AuthService';
 import { User } from '../model/user.model';
 //import { User } from '../core/model/user.model';
 
@@ -17,6 +18,23 @@ export class LoginComponent implements OnInit {
   invalidLogin: boolean = false;
   constructor(private formBuilder: FormBuilder, private router: Router, private apiService: ApiService) { }
 
+  // loginForm!: FormGroup;
+  // invalidLogin: boolean = false;
+  // constructor(private formBuilder: FormBuilder, private router: Router, private apiService: ApiService) { }
+
+  // onSubmit() {
+  //   if (this.loginForm.invalid) {
+  //     return;
+  //   }
+  //   const loginPayload = {
+  //     username: this.loginForm.controls['username'].value,
+  //     password: this.loginForm.controls['password'].value
+  //   }
+  //   this.apiService.login(loginPayload).subscribe(data => {
+  //     debugger;
+  //     if(data.status === 200) {
+  //       window.localStorage.setItem('token', data.result.token);
+  //       this.router.navigate(['list-user']);
   onSubmit() {
     if (this.loginForm.invalid) {
       return;
@@ -48,6 +66,8 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.required]
     });
   }
+
+
    getUser(name:string) {
     this.apiService.getUsername(name).subscribe(data=>{this.user=data;
     console.log(data.result.role);

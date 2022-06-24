@@ -26,7 +26,7 @@
                         <tr>
                             <td>{{t.reserevdPackageId}}</td>
                             <td>  
-                                {{t.packageName}}
+                                <a [routerLink]="['/tourinfo', t.reserevdPackageId]">{{t.packageName}}</a>
                             
                             </td>
                             <td>{{t.noOfPersons}}></td>
@@ -42,7 +42,7 @@
                             <td>
                              <button  class="btn btn-outline-primary btn-sm" (click)="editPackage(t)">
                                        
-                                  Edit
+                                  Edit 
                                 </button>
                               </td>
 

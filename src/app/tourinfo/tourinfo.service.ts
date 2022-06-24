@@ -14,9 +14,11 @@ export class TourinfoService {
   
   
   getReservedpackageById(id:number): Observable<any>{
-    return this.http.get<any>(this._url + id)
+    console.log(id);
+    return this.http.get<any>(this._url+id)
+    
   }
-  updateUser(tour:ITourInfo): Observable<any> {
+  updatepackages(tour:ITourInfo): Observable<any> {
     return this.http.put<any>(this._urlUpdate,tour);
   }
   getAllReservedPackages():Observable<any>{

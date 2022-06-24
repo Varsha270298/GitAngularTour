@@ -20,10 +20,10 @@
                 <label class="col-md-2 col-form-label" for="startDate">StartDate:</label>
                 <div class="col-md-8">
                     <input class="form-control" id="sdate" type="date" formControlName="startDate" required>
-                    <!-- [ngClass]="{'is-invalid':displayMessage.startDate]}"/>
-                    <span class="invalid-feedback">
-                        {{displayMessage.startDate}}
-                      </span> -->
+                    <!-- <div *ngIf="!firstName?.valid && (firstName?.dirty || firstName?.touched)">
+                        <div [hidden]="!firstName?.errors?.['required']">
+                            First name is required
+                        </div> -->
                 </div>
             </div>
                  <div class="form-group row mb-2">
@@ -95,15 +95,12 @@
               type="submit"
               [title]="tourInfoForm.valid ? 'Save your entered data' : 'Disabled until the form data is valid'"
               [disabled]="!tourInfoForm.valid">
-        Save
+           Save
       </button>
         <button class="btn btn-outline-secondary mr-3"
       style="width:80px;"
       type="button"
-    
-
-      [routerLink]="['tourinfo']" 
-     >
+      href="/tourinfo" >
       Cancel
      </button>
       </div>
