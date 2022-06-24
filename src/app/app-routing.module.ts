@@ -15,10 +15,12 @@ import { TourinfoEditComponent } from './tourinfo-edit/tourinfo-edit.component';
 import { TourinfoListComponent } from './tourinfo-list/tourinfo-list.component';
 import { TourinfoComponent } from './tourinfo/tourinfo.component';
 import { WelcomeTourComponent } from './welcome-tour/welcome-tour.component';
+import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
+import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 
 
 
- { path: 'addtour', component: AddTourComponent },
+
 const routes: Routes =[
 { path:'addtour', component: AddTourComponent },
 {path:'tourinfo',component:TourinfoComponent},
@@ -33,13 +35,10 @@ const routes: Routes =[
 { path: 'add-user', component: AddUserComponent },
 { path: 'list-user', component: ListUserComponent },
 { path: 'edit-user', component: EditUserComponent },
-{path:'welcome', component:WelcomeTourComponent},
-// {path:'viewtour',component:TourInformationSystemListComponent},
+{path:'', component:WelcomeTourComponent},
 {path:'admindashboard',component:AdminDashboardComponent },
-
-
-
-
+{path:'customerdashboard',component:CustomerDashboardComponent},
+{path:'customeredit', component:CustomerEditComponent}
 
 ];
   

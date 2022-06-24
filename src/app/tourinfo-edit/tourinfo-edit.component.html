@@ -95,15 +95,12 @@
               type="submit"
               [title]="tourInfoForm.valid ? 'Save your entered data' : 'Disabled until the form data is valid'"
               [disabled]="!tourInfoForm.valid">
-        Save
+           Save
       </button>
         <button class="btn btn-outline-secondary mr-3"
       style="width:80px;"
       type="button"
-    
-
-      [routerLink]="['tourinfo']" 
-     >
+      href="/tourinfo" >
       Cancel
      </button>
       </div>

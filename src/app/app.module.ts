@@ -25,6 +25,8 @@ import { CustomerComponent } from './customer/customer.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 
 
 
@@ -47,6 +49,8 @@ import { RouterModule } from '@angular/router';
     TourinfoListComponent,
     CustomerDashboardComponent,
     StaffDashboardComponent,
+    AdminDashboardComponent,
+    CustomerEditComponent
     ],
   imports: [
     BrowserModule,

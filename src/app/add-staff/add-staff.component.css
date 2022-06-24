@@ -11,7 +11,7 @@ body {
     background-color: powderblue;
 }
 .container_form {
-    background-image: url('../../assets/images/bus.jpg');
+    /* background-image: url('../../assets/images/bus.jpg'); */
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
     background-size: contain;

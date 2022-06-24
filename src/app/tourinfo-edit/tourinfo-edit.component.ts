@@ -20,6 +20,7 @@ export class TourinfoEditComponent implements OnInit, AfterViewInit, OnDestroy {
   title:string="ReserevedTourPackage";
   tourInfoForm!: FormGroup;
   sub!:Subscription;
+
  
   displayMessage: { [key: string]: string } = {};
   private validationMessages: { [key: string]: { [key: string]: string } };
@@ -43,26 +44,49 @@ export class TourinfoEditComponent implements OnInit, AfterViewInit, OnDestroy {
   }
  
   ngOnInit(): void {
+    this.initForm();
+    this.tourservice.getReservedpackageById( this._route.snapshot.params['id']).subscribe(
+      data=>{
+        console.log(data)
+        this.tourInfoForm.controls['packageName'].setValue(data.packageName);
+        this.tourInfoForm.controls['description'].setValue(data.description);
+        this.tourInfoForm.controls['startDate'].setValue(data.startDate);
+        this.tourInfoForm.controls['endDate'].setValue(data.endDate);
+        this.tourInfoForm.controls['noOfPersons'].setValue(data.noOfPersons);
+        this.tourInfoForm.controls['numberOfDays'].setValue(data.numberOfDays);
+        this.tourInfoForm.controls['amountPerPerson'].setValue(data.amountPerPerson);
+        this.tourInfoForm.controls['modeOfTransportation'].setValue(data.modeOfTransportation);
+        this.tourInfoForm.controls['payMode'].setValue(data.payMode);
+        this.tourInfoForm.controls['confirm'].setValue(data.confirm);
+        this.tourInfoForm.controls['hotel'].setValue(data.hotel);
+        this.tourInfoForm.controls['status'].setValue(data.status);
+    
+      }
+    );
+    
+    
+
+  }
+  initForm(){
     this.tourInfoForm=this.formBuilder.group({
      
       packageName:'',
       description:'',
-	    startDate:['',Validators.required],
-	    endDate:['',Validators.required],
-	    noOfPersons:[0,Validators.required,Validators.max(10)],
+	    startDate:['',[Validators.required]],
+	    endDate:['',[Validators.required]],
+	    noOfPersons:[0,[Validators.required,Validators.max(10)]],
 	    numberOfDays:0,
       amountPerPerson:0,
 	    modeOfTransportation:'',
-	    paymode:['',Validators.required],
-	    confirm:['',Validators.required],
+	    payMode:['',[Validators.required]],
+	    confirm:['',[Validators.required]],
       hotel:'',
-	    statusof:['',Validators.required],
+	    status:['',[Validators.required]],
       
     
 
-    })
-  
-
+    });
+    
   }
   get endDate() { 
     return this.tourInfoForm.get('endDate'); 
@@ -83,8 +107,8 @@ export class TourinfoEditComponent implements OnInit, AfterViewInit, OnDestroy {
 
   }
   onCancel():void{
-    console.log('on cancel')
-  //  this.router.navigateByUrl('/tourinfo');
+    
+    this.router.navigateByUrl('../tourinfo');
    
   }
   ngAfterViewInit(): void {
