@@ -27,6 +27,7 @@ import { UpdateCustomerComponent } from './update-customer/update-customer.compo
 import { WelcomeTourComponent } from './welcome-tour/welcome-tour.component';
 import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
 import { CustomerEditComponent } from './customer-edit/customer-edit.component';
+import { StaffDashboardComponent } from './staff-dashboard/staff-dashboard.component';
 
 
 
@@ -34,40 +35,20 @@ import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 
 const routes: Routes =[
 { path: 'addtour', component:AddTourComponent },
-
 {path:'tourinfo',component:TourinfoComponent},
 {path:'tourinfo/:id',component:TourinfoEditComponent },
 {path:'customer',component:CustomerComponent},
 {path:'customer-list',component:CustomerListComponent},
 {path:'login',component:LoginComponent},
-
-
-
 { path: 'edittour', component:EditTourInformationSystemComponent },
-
 { path: 'add-user', component: AddUserComponent },
 { path: 'list-user', component: ListUserComponent },
 { path: 'edit-user', component: EditUserComponent },
 //{path:'register', component:RegisterComponent},
-
-
 { path: 'listtour', component: TourInformationSystemListComponent},
-{ path: 'edittour', component:EditTourInformationSystemComponent },
 {path:'viewtour',component:TourInformationSystemListComponent},
-
-
-
-
 {path:'update-customer',component:UpdateCustomerComponent},
-{ path: 'edittour', component:EditTourInformationSystemComponent },
-{ path: 'add-user', component: AddUserComponent },
-{ path: 'list-user', component: ListUserComponent },
-//{ path: 'edit-user', component: EditUserComponent },
 {path:'register', component:RegisterComponent},
-{path : '', component : LoginComponent, pathMatch:'full'},
-{path: 'edittour', component:EditTourInformationSystemComponent },
-{ path: 'edittour', component:EditTourInformationSystemComponent },
-{ path: 'listtour', component: TourInformationSystemListComponent},
 { path: 'CustTourList', component:CustomerTourListComponent },
 { path: 'restourlist', component:TourinfoListComponent },
 { path: 'add-user', component: AddUserComponent },
@@ -76,11 +57,8 @@ const routes: Routes =[
 {path:'', component:WelcomeTourComponent},
 {path:'admindashboard',component:AdminDashboardComponent },
 {path:'customerdashboard',component:CustomerDashboardComponent},
-{path:'customeredit', component:CustomerEditComponent}
-
-
-
-
+{path:'customeredit', component:CustomerEditComponent},
+{path:'staffdashboard', component:StaffDashboardComponent}
 
 
 ]
