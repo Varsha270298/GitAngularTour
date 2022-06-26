@@ -8,6 +8,19 @@
       <div class="form-group">
         <label for="packageName">Package Name:</label>
         <input type="text" formControlName="packageName" placeholder="package name" name="packageName" class="form-control" id="packageName">
+        <div class="error" *ngIf="addForm.controls['packageName'].hasError('required') && addForm.controls['packageName'].touched">Package is required</div>
+
+        <!-- <div *ngIf="packageName.invalid && (packageName.dirty || packageName.touched)" class="alert"></div> -->
+
+         <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+
+      <div *ngIf="packageName.errors?.['required']">
+       Name is required.
+        </div>
+      <div *ngIf="packageName.errors?.['minlength']">
+       Name must be at least 4 characters long.
+      </div>   -->
+
       </div>
   
       <div class="form-group">
@@ -34,8 +47,74 @@
         <input type="number" formControlName="amountPerPerson" placeholder="amountPerPerson" name="amountPerPerson" class="form-control" id="amountPerPerson">
       </div>
       <br>
+        <p>
+           {{addForm.valid}}
+        </p>
   
       <button class="btn btn-success">Submit</button>
     </form>
   </div>
+    
+<!-- ---------------------------------------------------------------------------------- -->
+   <!-- <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="packageName">Package Name: </label>
+        <input id="packageName" type="text" formControlName="packageName">
+       
+    </div>
+    <br>
+    <div>
+        <label for="description">Description: </label>
+        <input id="description" type="text" formControlName="description">
+    
+    </div>
+    <br>
+    <label for="numberOfDays">Number Of Days: </label>
+    <input id="numberOfDays" type="number" formControlName="numberOfDays">
+    <br>
+    <label for="hotel">Hotel: </label>
+    <input id="hotel" type="text"  formControlName="hotel">
+   
+    <br>
+    <label for="amountPerPerson">Amount Per Person: </label>
+    <input id="amountPerPerson" type="number"  formControlName="amountPerPerson">
+   
+    <br>
+    <label for="modeOfTransportation">Mode Of Transportation: </label>
+    <input id="modeOfTransportation" type="text"  formControlName="modeOfTransportation">
+   <br>
+<p>
+{{addForm.valid}}
+</p>
+    <button type="submit" [disabled]="!addForm.valid">Submit</button>
   
+  </form> -->
+  <!-- -------------------------------------------------------------------------- -->
+  <!-- <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group"> <label>Package Name</label>
+    <input type="text" formControlName="packageName" id="packageName" class="form-control" [ngClass]="{ 'is-invalid': submitted
+    && f.packageName.errors }" />
+    <div *ngIf="submitted && f.packageName.errors" class="invalid-feedback">
+    <div *ngIf="f.packageName.errors.required">Package Name is required</div> </div> </div>
+
+    <div class="form-group"> <label>Description</label>
+    <input type="text" formControlName="description" id="description" class="form-control" [ngClass]="{ 'is-invalid':
+    submitted && f.description.errors }" />
+    <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+    <div *ngIf="f.description.errors.required">Description is required</div> </div> </div>
+
+    <div class="form-group"> <label>Email</label>
+    <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted &&
+    f.email.errors }" />
+    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+    <div *ngIf="f.email.errors.required">Email is required</div>
+    <div *ngIf="f.email.errors.email">Email must be a valid email address</div> </div> </div>
+    <div class="form-group"> <label>Password</label>
+    <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid':
+    submitted && f.password.errors }" />
+    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+    <div *ngIf="f.password.errors.required">Password is required</div>
+    <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div></div> </div>
+
+    <div class="form-group"> <button [disabled]="!addForm.valid" class="btn btn-primary">Register</button>
+    </div> </form> -->

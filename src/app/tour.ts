@@ -1,5 +1,5 @@
 export class Tour {
-    packageId!:number;
+     packageId!:number;
     amountPerPerson!: number;
     packageName!: string;
     description!: string;

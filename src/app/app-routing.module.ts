@@ -62,7 +62,12 @@ const routes: Routes =[
 {path:'customeredit', component:CustomerEditComponent},
 {path:'staff', component:StaffDashboardComponent},
 {path:'addTourInfo',component:AddTourinfoComponent},
-{path:'app-cart',component:CartComponent}
+{path:'app-cart',component:CartComponent},
+
+{path:'staffdashboard', component:StaffDashboardComponent},
+{path:'staff', component:StaffDashboardComponent}
+
+
 ]
 
 @NgModule({

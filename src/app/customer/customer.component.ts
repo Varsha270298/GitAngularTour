@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent implements OnInit {
+  @Input() cust:boolean = false;
+  @Input() editcust:boolean = false;
+  cancelbutton:boolean=false;
 
   sampleForm = new FormGroup({
     firstName:new FormControl('',Validators.required),
@@ -30,6 +33,7 @@ export class CustomerComponent implements OnInit {
     return this.sampleForm.get('userId') 
   }
 
+
   get mobileNo(){
     return this.sampleForm.get('mobileNo') 
   }
@@ -37,6 +41,19 @@ export class CustomerComponent implements OnInit {
   constructor(private http: HttpClient,private router: Router) { }
 
   ngOnInit(): void {
+    console.log(this.cust);
+    
+    // this.sampleForm.controls['username'].setValue()
+    this.http.get<any>('http://localhost:8282/customer/id/aaa').subscribe(data => {
+
+    });
+    this.sampleForm.controls.firstName.setValue(window.localStorage.getItem('usename'));
+  }
+  cancel(){
+    console.log('cancel');
+    // $('#').val();
+    // document.getElementById('visible').a
+    this.cancelbutton = true;
   }
 
   display(){
@@ -46,7 +63,7 @@ export class CustomerComponent implements OnInit {
       }
       let payload = {
         "age": this.sampleForm.controls.age.value,
-        "firstName": this.sampleForm.controls.firstName.value,
+        "firstName": window.localStorage.getItem('usename'),
         "gender": this.sampleForm.controls.gender.value,
         "lastName": this.sampleForm.controls.lastName.value,
         "mobileNo": this.sampleForm.controls.mobileNo.value,
@@ -58,7 +75,7 @@ export class CustomerComponent implements OnInit {
         alert('Enter Valid Details..!');
         return;
       }
-     this.http.post<any>('http://localhost:8282/Tour_Management/cust/addcust', payload).subscribe(data => {
+     this.http.post<any>('http://localhost:8282/customer/addcustomer', payload).subscribe(data => {
       debugger;
       //  console.log(data);
       //  if(data.status === 200){
@@ -67,7 +84,10 @@ export class CustomerComponent implements OnInit {
       //  }
     })
     alert('Submitted sucessfully...!');
-    this.router.navigate(['login']);
+    
+    this.router.navigate(['customerdashboard']);
+    
+     document.getElementById("visible")?.classList.remove("is-visible");
 
   }
 

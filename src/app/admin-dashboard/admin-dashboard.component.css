@@ -1,0 +1,16 @@
+.card_container {
+    
+    background-image: url( "../../assets/Images/src/airport.jpg"  );
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+} 
+
+
+h1{
+    font: size 80px;;
+    color: blue;
+    background-color:azure;
+    text-align: center;
+
+}

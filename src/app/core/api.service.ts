@@ -13,6 +13,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
   baseUrl: string = 'http://localhost:8282/users/';
+  baseUrlcust: string = 'http://localhost:8282/cust/';
 
   login(loginPayload:any) : Observable<ApiResponse> {
     return this.http.post<ApiResponse>('http://localhost:8282' + '/token/generate-token', loginPayload);
@@ -24,6 +25,9 @@ export class ApiService {
 
   getUserById(id: number): Observable<ApiResponse> {
     return this.http.get<ApiResponse>(this.baseUrl + id);
+  }
+  getcustomerbyloginId(id:number): Observable<ApiResponse> {
+    return this.http.get<ApiResponse>(this.baseUrlcust+'id/' + id);
   }
 
   createUser(user: User): Observable<ApiResponse> {

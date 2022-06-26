@@ -1,13 +1,37 @@
-
+<h1>Customer Dashboard</h1>
 <nav class='navbar navbar-expand navbar-light bg-light'>
    
-    <ul class='nav nav-pills'>
+    <ul class='nav nav-pills' style="width: 95%;">
 
-      <li><a class='nav-link' routerLinkActive='active' routerLink='/tourinfo'>reservedtourpackages</a></li>
+      <li><a class='nav-link' routerLinkActive='active' routerLink='/tourinfo'>Reserved Tour Packages</a></li>   
+      <li><a class='nav-link' routerLinkActive='active' routerLink='/CustTourList'>Tour List </a></li>   
+<!--       
+      <li><a class='nav-link' routerLinkActive='active' routerLink='/edit-user'>update Customer</a></li> -->
+
+
       <li><a class='nav-link' routerLinkActive='active' routerLink='/customeredit'>Edit Customer</a></li>
-      <li><a class='nav-link' routerLinkActive='active' routerLink='/CustTourList'>TourList</a></li>
-      <!-- <li><a class='nav-link' routerLinkActive='active' routerLink='/addTourInfo'>add resereve tour</a></li> -->
-      
-      
-    </ul>
+   </ul>
+    <a style="width: 200px;" class='nav-link' routerLinkActive='active' (click)="editcustfunc()">Edit Customer</a>
+    <button class="btn btn-success" (click)="logout()">logout</button>
+  
 </nav>
+
+
+<div id="visible" [ngClass]="!cust ? 'form-popup-bg is-visible':'form-popup-bg'">
+  <div class="form-container">
+    <button id="btnCloseForm" class="close-button" (click)="cust=true">X</button>
+    <app-customer 
+    [cust] = 'cust'
+    [editcust] = 'editcust'
+     ></app-customer>
+  </div>
+</div>
+
+     
+      
+
+      
+    <!-- <div><button (click)="logout()">logout</button></div> -->
+    <button class="btn btn-success">logout</button>
+</nav>
+
