@@ -41,7 +41,10 @@ export class LoginComponent implements OnInit {
        this.getUser(data.result.username);
        
 
-      }else {
+      } 
+      
+      
+      else {
         this.invalidLogin = true;
         alert(data.message);
       }

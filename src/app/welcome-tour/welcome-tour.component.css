@@ -1,101 +1,104 @@
-.input-container{
-    width: 100%;
-    height: 60px;
-}
-.navbar-brand {
-    margin-left: 25px;
-}
-.nav_class {
-    width: 100%;
-    /* margin: 0; */
-    height: 100%;
-    /* position: fixed; */
-    top: 0;
-} 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100vh;
 }
-.nav_ul {
-    flex-direction: row;
+.nav-item {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.nav-item a {
+    font-size: 20px;
+}
+strong {
+    font-size: 35px;
+    padding-left: 30px;
+}
+.parent_container {
     width: 100%;
-    justify-content: flex-end;
+    height: 60px;
+    /* position: fixed; */
 }
-.nav_ul li {
-    font-size: 16px;
-    text-align: center;
-    margin: 0 10px;
+@media only screen and (max-width: 1200px) {
+    .carousel {
+        z-index: -1;
+    }
+    
 }
-.nav_ul li a{
-    width: 100px;
-    padding: 0 10px;
-    line-height: 60px;
-}
-.nav_search input{
-    padding: 5px;
-    width: 250px;
-}
-.nav_search button{
-    margin-left: 25px;
-    padding: 10px 25px;
-}
+
 .c_img {
     height: 550px;
 }
-.carousel {
-     margin-bottom: 50px; 
- } 
 .container_card {
     display: flex;
     gap: 50px;
     justify-content: space-evenly;
     align-items: center;
 }
+
 .card {
     width: 200px;
     text-align: center;
     padding: 10px;
+    /* z-index: -1; */
 }
-.card * {
-    margin: 10px 0;
-}
-.card1 p, .card2 p {
-    height: 200px;
-    text-align: justify;
-}
-.card3 p{
-    text-align: center;
-}
- .card_container {
-    
-    background-image: url( "../../assets/Images/src/airport.jpg"  );
+
+.card_container {
+    background-image: url("../../assets/Images/src/airport.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-} 
-.card2{
+}
+
+.card * {
+    margin: 10px 0;
+}
+
+.card2 {
     padding-top: 25px;
     margin-bottom: 25px;
 }
+
 .card3 {
     margin-top: 25px;
     padding-bottom: 25px;
 }
+
+.card1 p,
+.card2 p {
+    height: 200px;
+    text-align: justify;
+}
+
+.card3 p {
+    text-align: center;
+}
+
+.card3 p:first-child {
+    color: red;
+}
+
+.card3 p:nth-child(2) {
+    color: green;
+    font-size: 30px;
+}
+
 .card_img {
     width: 100%;
     height: 200px;
     background-size: cover;
     background-position: center;
 }
- .img1 {
+
+.img1 {
     background-image: url('../../assets/Images/src/India.jpg');
 }
+
 .img2 {
     background-image: url('../../assets/Images/src/england.jpg');
 }
@@ -103,26 +106,33 @@ html, body {
 .img3 {
     background-image: url('../../assets/Images/src/Dubai.jpg');
 }
+
 .img4 {
     background-image: url('../../assets/Images/src/ph.jpg');
 }
+
 .img5 {
     background-image: url('../../assets/Images/src/airport.jpg');
 }
+
 .img6 {
     background-image: url('../../assets/Images/src/vietnam.jpg');
-} 
-.img7{
+}
+
+.img7 {
     height: 05vh;
     width: 20px;
 }
+
 .signup_btn {
     line-height: 40px;
 }
+
 .custom_button {
     width: 159px;
     padding: 10px 15px;
 }
+
 footer {
     /* Created with https://www.css-gradient.com */
     background: #5B23E4;
@@ -135,24 +145,23 @@ footer {
     gap: 20px;
     padding: 25px 0;
 
+    position: relative;
     text-align: center;
+    overflow: hidden;
 }
+
 footer h1 {
     font-family: cursive;
 }
+
 footer span {
     margin-left: 50px;
 }
-footer span i{
+
+footer span i {
     margin-right: 10px;
 }
+
 footer div button {
     margin-left: 20px;
 }
-.card3 p:first-child {
-    color: red;
-}
-.card3 p:nth-child(2) {
-    color: green;
-    font-size: 30px;
-} 

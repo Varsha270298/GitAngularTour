@@ -40,9 +40,15 @@ const routes: Routes =[
 {path:'customer',component:CustomerComponent},
 {path:'customer-list',component:CustomerListComponent},
 {path:'login',component:LoginComponent},
-
 { path: 'edittour', component:EditTourInformationSystemComponent },
+{ path: 'add-user', component: AddUserComponent },
+{ path: 'list-user', component: ListUserComponent },
+{ path: 'edit-user', component: EditUserComponent },
+//{path:'register', component:RegisterComponent},
 { path: 'listtour', component: TourInformationSystemListComponent},
+{path:'viewtour',component:TourInformationSystemListComponent},
+{path:'update-customer',component:UpdateCustomerComponent},
+{path:'register', component:RegisterComponent},
 { path: 'CustTourList', component:CustomerTourListComponent },
 { path: 'restourlist', component:TourinfoListComponent },
 { path: 'add-user', component: AddUserComponent },
@@ -54,6 +60,19 @@ const routes: Routes =[
 {path:'admindashboard',component:AdminDashboardComponent },
 {path:'customerdashboard',component:CustomerDashboardComponent},
 {path:'customeredit', component:CustomerEditComponent},
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6081dd6a9d90e5557de711ed2f69006ecadf85fd
+>>>>>>> de84bbc533997c2e8c568b35fbd9dc340dbb391e
+{path:'staffdashboard', component:StaffDashboardComponent}
+
+=======
+>>>>>>> 78e9a4cf2d915032c34943e649fafa7f86172667
 {path:'staff', component:StaffDashboardComponent}
 
 ]

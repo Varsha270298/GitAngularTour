@@ -1,0 +1,54 @@
+html, body {
+    height: 100vh;
+  }
+  .row_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+ /* Created with https://www.css-gradient.com */
+background: #010101;
+background: -webkit-linear-gradient(top left, #010101, #3B8297);
+background: -moz-linear-gradient(top left, #010101, #3B8297);
+background: linear-gradient(to bottom right, #010101, #3B8297);
+  }
+  .container1 {
+    background-color: white;
+    border-radius: 15px;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 10%;
+    width: 350px;
+    padding: 20px;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  }
+
+  .container1 > * {
+    margin-top: 25px;
+  }
+ 
+  .special {
+    font-size: 50px;
+    font-family: monospace;
+  }
+  .form-group:not(:last-child) {
+    /* height: 100px; */
+    margin: 20px 0;
+  }
+  .form-group > * {
+    margin: 5px 0;
+  }
+  .form-group:last-child > * {
+    /* margin-right: 25px; */
+    /* text-align: center; */
+  }
+  .button2 {
+    float: right;
+    width: 100%;
+  }
+  .error {
+    color: red;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-family: monospace;
+  }

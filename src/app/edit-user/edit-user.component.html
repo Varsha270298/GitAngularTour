@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<div class="col-md-6 user-container">
-  <h2 class="text-center">Edit User</h2>
-  <form  (ngSubmit)="onSubmit()">
-=======
 
 
 <div class="col-md-6 user-container">
   <h2 class="text-center">Edit User</h2>
   <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
->>>>>>> 33bfac33becbfb2b5aa454c8e64861c204564255
     <div class="hidden">
       <input type="text" formControlName="id" placeholder="id" name="id" class="form-control" id="id">
     </div>
@@ -16,17 +10,12 @@
       <label for="username">User Name:</label>
       <input type="text" formControlName="username" placeholder="username" name="username" class="form-control" id="username" readonly="true">
     </div>
-<<<<<<< HEAD
-
-    <div class="form-group">
-=======
     <div class="form-group">
       <label for="role">role:</label>
       <input type="text" formControlName="role" placeholder="role" name="role" class="form-control" id="role" readonly="true">
     </div>
 
   <div class="form-group">
->>>>>>> 33bfac33becbfb2b5aa454c8e64861c204564255
       <label for="firstName">First Name:</label>
       <input formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
     </div>
@@ -34,19 +23,6 @@
     <div class="form-group">
       <label for="lastName">Last Name:</label>
       <input formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
-<<<<<<< HEAD
-    </div>
-
-    <div class="form-group">
-      <label for="age">Age:</label>
-      <input type="number" formControlName="age" placeholder="age" name="age" class="form-control" id="age">
-    </div>
-
-    <div class="form-group">
-      <label for="salary">Salary:</label>
-      <input type="number" formControlName="salary" placeholder="salary" name="salary" class="form-control" id="salary">
-    </div>
-=======
     </div> 
 
   <div class="form-group"> 
@@ -58,7 +34,6 @@
      <label for="salary">Salary:</label>
       <input type="number" formControlName="salary" placeholder="salary" name="salary" class="form-control" id="salary"> -->
     </div> 
->>>>>>> 33bfac33becbfb2b5aa454c8e64861c204564255
 
     <button class="btn btn-success">Update</button>
   </form>
