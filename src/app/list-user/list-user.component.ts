@@ -4,7 +4,19 @@ import { ApiService } from '../core/api.service';
 import { User } from '../model/user.model';
 
 @Component({
+<<<<<<< HEAD
+  selector: 'app-list-user',
+=======
+<<<<<<< HEAD
+  selector: 'app-list-user',
+=======
+<<<<<<< HEAD
+  selector: 'app-list-user',
+=======
   // selector: 'app-list-user',
+>>>>>>> 782f62e4934b5d6487f6a5edeb5a949e08fbba8f
+>>>>>>> 6081dd6a9d90e5557de711ed2f69006ecadf85fd
+>>>>>>> de84bbc533997c2e8c568b35fbd9dc340dbb391e
   templateUrl: './list-user.component.html',
   styleUrls: ['./list-user.component.css']
 })
