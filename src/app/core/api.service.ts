@@ -1,11 +1,14 @@
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {User} from "../model/user.model";
+
 import {Observable} from "rxjs/index";
-import { ApiResponse } from '../model/api.response';
 
 
-@Injectable()
+import { ApiResponse } from '../api.response';
+import { User } from '../model/user.model';
+
+@Injectable({providedIn:'root'})
 export class ApiService {
 
   constructor(private http: HttpClient) { }
@@ -16,7 +19,7 @@ export class ApiService {
   }
 
   getUsers() : Observable<ApiResponse> {
-    return this.http.get<ApiResponse>(this.baseUrl );
+    return this.http.get<ApiResponse>(this.baseUrl);
   }
 
   getUserById(id: number): Observable<ApiResponse> {
