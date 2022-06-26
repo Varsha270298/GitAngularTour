@@ -60,12 +60,7 @@ const routes: Routes =[
 {path:'admindashboard',component:AdminDashboardComponent },
 {path:'customerdashboard',component:CustomerDashboardComponent},
 {path:'customeredit', component:CustomerEditComponent},
-<<<<<<< HEAD
-{path:'staffdashboard', component:StaffDashboardComponent}
-
-=======
 {path:'staff', component:StaffDashboardComponent}
->>>>>>> 782f62e4934b5d6487f6a5edeb5a949e08fbba8f
 
 ]
 
