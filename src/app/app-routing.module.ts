@@ -60,6 +60,19 @@ const routes: Routes =[
 {path:'admindashboard',component:AdminDashboardComponent },
 {path:'customerdashboard',component:CustomerDashboardComponent},
 {path:'customeredit', component:CustomerEditComponent},
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 6081dd6a9d90e5557de711ed2f69006ecadf85fd
+>>>>>>> de84bbc533997c2e8c568b35fbd9dc340dbb391e
+{path:'staffdashboard', component:StaffDashboardComponent}
+
+=======
+>>>>>>> 78e9a4cf2d915032c34943e649fafa7f86172667
 {path:'staff', component:StaffDashboardComponent}
 
 ]
