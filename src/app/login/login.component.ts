@@ -18,23 +18,7 @@ export class LoginComponent implements OnInit {
   invalidLogin: boolean = false;
   constructor(private formBuilder: FormBuilder, private router: Router, private apiService: ApiService) { }
 
-  // loginForm!: FormGroup;
-  // invalidLogin: boolean = false;
-  // constructor(private formBuilder: FormBuilder, private router: Router, private apiService: ApiService) { }
-
-  // onSubmit() {
-  //   if (this.loginForm.invalid) {
-  //     return;
-  //   }
-  //   const loginPayload = {
-  //     username: this.loginForm.controls['username'].value,
-  //     password: this.loginForm.controls['password'].value
-  //   }
-  //   this.apiService.login(loginPayload).subscribe(data => {
-  //     debugger;
-  //     if(data.status === 200) {
-  //       window.localStorage.setItem('token', data.result.token);
-  //       this.router.navigate(['list-user']);
+  
   onSubmit() {
     if (this.loginForm.invalid) {
       return;
@@ -48,14 +32,19 @@ export class LoginComponent implements OnInit {
       if(data.status === 200) {
         window.localStorage.setItem('token', data.result.token);
        //this.router.navigate(['list-user']);
+       console.log(localStorage.getItem("token"));
        console.log(data.result.username);
        this.getUser(data.result.username);
        
 
-      }else {
+      } 
+      
+      
+      else {
         this.invalidLogin = true;
         alert(data.message);
       }
+
     });
   }
 
@@ -78,7 +67,8 @@ export class LoginComponent implements OnInit {
     else if(data.result.role==='STAFF')
     this.router.navigate(['staff'])
    });
-   // (data:User)=>{this.user=data;
+
+     // (data:User)=>{this.user=data;
     
      // if(this.user.role==='USER')
        //this.router.navigate(['listtour'])
@@ -87,7 +77,11 @@ export class LoginComponent implements OnInit {
 
       }
     
+
+
 }
+
+
 
 
 
