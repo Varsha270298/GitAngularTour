@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Tour } from '../tour';
 import { ITourInfo } from '../tourinfo/tourInfo';
 import { TourinfoService } from '../tourinfo/tourinfo.service';
 
@@ -11,10 +13,12 @@ import { TourinfoService } from '../tourinfo/tourinfo.service';
 export class TourinfoListComponent implements OnInit {
   title:string="ReserevedPacakges";
   tourinfo!:ITourInfo[];
+  @Input() mytours:Tour[]=[];
   private _listFilter:string="";
   filteredTour:ITourInfo[]= [];
+  addtourInfoForm!: FormGroup;
 
-  constructor(private tourservice:TourinfoService,private router:Router, private route: ActivatedRoute) { }
+  constructor(private tourservice:TourinfoService,private router:Router, private route: ActivatedRoute,private formbuilder:FormBuilder) { }
   get listFilter():string{
     return this._listFilter;
   }
@@ -25,7 +29,19 @@ export class TourinfoListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.initForm();
     this.getAllPackages();
+
+  }
+  initForm(){
+    this.addtourInfoForm=this.formbuilder.group({
+      startDate:'',
+	    endDate:'',
+	    noOfPersons:[0,[Validators.required,Validators.max(10)]],
+	    payMode:['',[Validators.required]],
+	    confirm:['',[Validators.required]],
+	    
+    });
   }
   performFilter(filterBy:string): ITourInfo[] {
     filterBy = filterBy.toLocaleLowerCase();
@@ -37,6 +53,12 @@ export class TourinfoListComponent implements OnInit {
     this.tourservice.getAllReservedPackages().subscribe(
       data=>{this.tourinfo=data;console.log('getpackages: ' + JSON.stringify(data))}
     );
+
+  }
+  
+  onSave(){
+        
+
   }
 
 

@@ -39,6 +39,8 @@ import { RouterModule } from '@angular/router';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 import { LoginComponent } from './login/login.component';
+import { AddTourinfoComponent } from './add-tourinfo/add-tourinfo.component';
+import { CartComponent } from './cart/cart.component';
 
 
 
@@ -80,7 +82,9 @@ CustomerEditComponent,
     AddTourComponent,
     TourInformationSystemListComponent,
     CustomerTourListComponent,
-    TourinfoListComponent
+    TourinfoListComponent,
+    AddTourinfoComponent,
+    CartComponent
    
   ],
   

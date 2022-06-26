@@ -28,6 +28,8 @@ import { WelcomeTourComponent } from './welcome-tour/welcome-tour.component';
 import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
 import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 import { StaffDashboardComponent } from './staff-dashboard/staff-dashboard.component';
+import { AddTourinfoComponent } from './add-tourinfo/add-tourinfo.component';
+import { CartComponent } from './cart/cart.component';
 
 
 
@@ -41,9 +43,7 @@ const routes: Routes =[
 {path:'customer-list',component:CustomerListComponent},
 {path:'login',component:LoginComponent},
 { path: 'edittour', component:EditTourInformationSystemComponent },
-{ path: 'add-user', component: AddUserComponent },
-{ path: 'list-user', component: ListUserComponent },
-{ path: 'edit-user', component: EditUserComponent },
+
 //{path:'register', component:RegisterComponent},
 { path: 'listtour', component: TourInformationSystemListComponent},
 {path:'viewtour',component:TourInformationSystemListComponent},
@@ -60,8 +60,9 @@ const routes: Routes =[
 {path:'admindashboard',component:AdminDashboardComponent },
 {path:'customerdashboard',component:CustomerDashboardComponent},
 {path:'customeredit', component:CustomerEditComponent},
-{path:'staff', component:StaffDashboardComponent}
-
+{path:'staff', component:StaffDashboardComponent},
+{path:'addTourInfo',component:AddTourinfoComponent},
+{path:'app-cart',component:CartComponent}
 ]
 
 @NgModule({

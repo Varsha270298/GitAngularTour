@@ -26,11 +26,7 @@ export class TourinfoComponent implements OnInit {
    
 
   }
-  //  getReservebyId(id:number){
-  //   this.tourservice.getReservedpackageById(id).subscribe(
-  //     data=>{this.t=data;console.log('getpackages: ' + JSON.stringify(data))}
-  //    )
-  //  }
+  
    editPackage(t:ITourInfo):void{
     console.log(t);
     this.router.navigate(['/tourinfo/'+ t.reserevdPackageId])

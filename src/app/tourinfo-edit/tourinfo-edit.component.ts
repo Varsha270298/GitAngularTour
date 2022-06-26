@@ -14,7 +14,7 @@ import { TourinfoService } from '../tourinfo/tourinfo.service';
   templateUrl: './tourinfo-edit.component.html',
   styleUrls: ['./tourinfo-edit.component.css']
 })
-export class TourinfoEditComponent implements OnInit, AfterViewInit, OnDestroy {
+export class TourinfoEditComponent implements OnInit, AfterViewInit {
   @ViewChildren(FormControlName, { read: ElementRef })
   formInputElements: ElementRef[] = [];
   title:string="ReserevedTourPackage";
@@ -48,6 +48,7 @@ export class TourinfoEditComponent implements OnInit, AfterViewInit, OnDestroy {
     this.tourservice.getReservedpackageById( this._route.snapshot.params['id']).subscribe(
       data=>{
         console.log(data)
+        this.tourInfoForm.controls['reserevdPackageId'].setValue(data.reserevdPackageId);
         this.tourInfoForm.controls['packageName'].setValue(data.packageName);
         this.tourInfoForm.controls['description'].setValue(data.description);
         this.tourInfoForm.controls['startDate'].setValue(data.startDate);
@@ -69,19 +70,19 @@ export class TourinfoEditComponent implements OnInit, AfterViewInit, OnDestroy {
   }
   initForm(){
     this.tourInfoForm=this.formBuilder.group({
-     
+      reserevdPackageId:'',
       packageName:'',
       description:'',
-	    startDate:['',[Validators.required]],
-	    endDate:['',[Validators.required]],
-	    noOfPersons:[0,[Validators.required,Validators.max(10)]],
+	    startDate:'',
+	    endDate:'',
+	    noOfPersons:[0,[Validators.required]],
 	    numberOfDays:0,
       amountPerPerson:0,
 	    modeOfTransportation:'',
 	    payMode:['',[Validators.required]],
 	    confirm:['',[Validators.required]],
       hotel:'',
-	    status:['',[Validators.required]],
+	    status:['',],
       
     
 
@@ -95,21 +96,15 @@ export class TourinfoEditComponent implements OnInit, AfterViewInit, OnDestroy {
   onSubmit(){
     this.tourservice.updatepackages(this.tourInfoForm.value).subscribe(
       data=>{
-        if(data.status==200){
-          alert('Updated Successfully');
-          this.router.navigate(['/tourinfo']);
-        }
-        else{
-         alert(data.message);
-        }
+        console.log(JSON.parse(data));
+        
       }
     );
-
+    alert('Updated Successfully');
+          this.router.navigate(['/tourinfo']);
   }
-  onCancel():void{
-    
-    this.router.navigateByUrl('../tourinfo');
-   
+  cancel():void{
+    this.router.navigate(['/tourinfo']);
   }
   ngAfterViewInit(): void {
     
@@ -121,9 +116,7 @@ export class TourinfoEditComponent implements OnInit, AfterViewInit, OnDestroy {
       this.displayMessage = this.genericValidator.processMessages(this.tourInfoForm);
     });
   }
-  ngOnDestroy(): void {
-    this.sub.unsubscribe();
-  }
+  
   
 
 }

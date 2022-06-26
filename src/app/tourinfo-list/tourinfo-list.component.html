@@ -18,7 +18,7 @@
 <div class="card-body">
         <div class="row">
             <div class="table-responsive">
-                <table class="table table-striped" *ngIf='tourinfo.length'>
+                <table class="table table-striped">
                     <thead class="thead-dark">
                         <tr>
                             <th>Id</th>
@@ -36,23 +36,69 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let t of filteredTour">
-                            <td>{{t.reserevdPackageId}}</td>
-                            <td> <a [routerLink]="['/tourinfo']">{{t.packageName}}</a></td>
-                            <td>{{t.noOfPersons}}></td>
+                        <tr *ngFor="let t of mytours">
+                            <td>{{t.packageId}}</td>
+                            <td>{{t.packageName}}</td>
+                            <td>{{t.description}}</td>
                             <td>{{t.numberOfDays}}</td>
-                            <td>{{t.modeOfTransportation}}></td>
+                            <td>{{t.amountPerPerson |currency:"INR"}}</td>
+                            <td>{{t.modeOfTransportation}}</td>
                             <td>{{t.hotel}}</td>
-                            <td>{{t.startDate}}</td>
-                            <td>{{t.endDate}}></td>
-                            <td>{{t.amountPerPerson}}</td>
-                            <td>{{t.payMode}}</td>
-                            <td>{{t.status}}</td>
-                            <td>{{t.confirm}}</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="card-header">
+        {{title}}
+    </div>
+    <div class="card-body">
+        <form novalidate  [formGroup]="addtourInfoForm"  (ngSubmit)="onSave()">
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="startDate">startDate :</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="startDate" type="date" formControlName="startDate" required>
+                </div>
+            </div>
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="endDate">endDate :</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="enddate" type="date" formControlName="endDate" required>
+                </div>
+            </div>
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="noOfPersons">noOfpersons :</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="noOfPersons" type="int" formControlName="noOfPersons" required>
+                </div>
+            </div>
+           <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="payMode">payMode :</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="payMode" type="text" formControlName="payMode" required>
+                </div>
+            </div>
+            <div class="form-group row mb-2">
+                <label class="col-md-2 col-form-label" for="confirm">confirm :</label>
+                <div class="col-md-8">
+                    <input class="form-control" id="confirm" type="text" formControlName="confirm" required>
+                </div>
+           </div>
+       <div class="form-group row mb-2">
+        <div class="offset-md-2 col-md-4">
+              <button class="btn btn-primary mr-3"
+                  style="width:200px;"
+                  type="submit">
+                 SAVE
+          </button>
+          
+          </div>
+          </div>
+    </form>
     </div>
 </div>

@@ -16,15 +16,14 @@
       </thead>
       <tbody>
       <tr *ngFor="let t of tours">
-        <!-- <td class="hidden">{{user.id}}</td> -->
         <td>{{t.packageId}}</td>
         <td>{{t.packageName}}</td>
         <td>{{t.description}}</td>
         <td>{{t.numberOfDays}}</td>
-        <td>{{t.amountPerPerson}}</td>
+        <td>{{t.amountPerPerson|currency:"INR"}}</td>
         <td>{{t.modeOfTransportation}}</td>
         <td>{{t.hotel}}</td>
-        <td><input type="checkbox"></td>
+        <td><button (click)="add(t)">AddCart</button></td>
         
       </tr>
       <div class="form-group row mb-2">
@@ -40,13 +39,18 @@
               <button class="btn btn-primary mr-3"
                   style="width:200px;"
                   type="submit" (click)="Booking()" >
-                 
-            Confirm Package
+                   Confirm Package
           </button>
           
           </div>
           </div>
       </tbody>
     </table>
+    <app-cart [totalBill]="totalBill" ></app-cart>
+    <app-tourinfo-list [mytours]="mytours"></app-tourinfo-list>
     </div> 
-  
+    <!-- <div [ngClass]="!cust ? 'form-popup-bg is-visible':'form-popup-bg'"> 
+      <div class="form-container">
+       <app-add-tourinfo [mytours]="mytours"></app-add-tourinfo>
+        </div>
+        </div> -->

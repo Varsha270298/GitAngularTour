@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        {{title}}
+        {{title |titlecase}}
     </div>
     <div class="card-body">
         <div class="row">
@@ -26,16 +26,16 @@
                         <tr>
                             <td>{{t.reserevdPackageId}}</td>
                             <td>  
-                                <a [routerLink]="['/tourinfo', t.reserevdPackageId]">{{t.packageName}}</a>
+                                <a [routerLink]="['/tourinfo', t.reserevdPackageId]">{{t.packageName | lowercase}}</a>
                             
                             </td>
                             <td>{{t.noOfPersons}}></td>
                             <td>{{t.numberOfDays}}</td>
                             <td>{{t.modeOfTransportation}}></td>
                             <td>{{t.hotel}}</td>
-                            <td>{{t.startDate}}</td>
-                            <td>{{t.endDate}}></td>
-                            <td>{{t.amountPerPerson}}</td>
+                            <td>{{t.startDate | date:'shortDate'}}</td>
+                            <td>{{t.endDate  | date:'shortDate' }}></td>
+                            <td>{{t.amountPerPerson|currency:"INR":"symbol"}}</td>
                             <td>{{t.payMode}}</td>
                             <td>{{t.status}}</td>
                             <td>{{t.confirm}}</td>

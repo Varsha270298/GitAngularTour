@@ -1,0 +1,110 @@
+<div class="card">
+            <div class="card-header">
+                {{title}}
+            </div>
+            <div class="card-body">
+                <form novalidate  [formGroup]="addtourInfoForm"  >
+                    <div class="form-group row mb-2">
+                        <label class="col-md-2 col-form-label" for="packagename">Id :</label>
+                        <div class="col-md-8">
+                            <input class="form-control" id="pId" type="text" formControlName="reserevdPackageId" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-2">
+                        <label class="col-md-2 col-form-label" for="packagename">PacakageName :</label>
+                        <div class="col-md-8">
+                            <input class="form-control" id="pname" type="text" formControlName="packageName" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-2">
+                        <label class="col-md-2 col-form-label" for="description">Description :</label>
+                        <div class="col-md-8">
+                            <input class="form-control" id="description" type="text" formControlName="description" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-2">
+                        <label class="col-md-2 col-form-label" for="startDate">StartDate:</label>
+                        <div class="col-md-8">
+                            <input class="form-control" id="sdate" type="date" formControlName="startDate" readonly>
+                           
+                        </div>
+                    </div>
+                         <div class="form-group row mb-2">
+                            <label class="col-md-2 col-form-label" for="endDate"> EndDate:</label>
+                            <div class="col-md-8">
+                                <input class="form-control" id="edate" type="date" formControlName="endDate" readonly>
+                                
+                                 </div>
+                       </div>
+                       <div class="form-group row mb-2">
+                        <label class="col-md-2 col-form-label" for="noOfPersons">NoOfPersons:</label>
+                        <div class="col-md-8">
+                            <input class="form-control" id="NoofPersons" type="number" formControlName="noOfPersons" required>
+                            
+                            
+                         </div>
+                   </div>
+                   <div class="form-group row mb-2">
+                    <label class="col-md-2 col-form-label" for="numberOfDays">NumberOfDays:</label>
+                    <div class="col-md-8">
+                        <input class="form-control" id="numberOfDays" type="number" formControlName="numberOfDays" readonly>
+                    </div>
+               </div>
+               
+           <div class="form-group row mb-2">
+            <label class="col-md-2 col-form-label" for="amountPerPerson">AmountPerPerson:</label>
+            <div class="col-md-8">
+                <input class="form-control" id="amountPerPerson" type="int" formControlName="amountPerPerson" readonly>
+            </div>
+        </div>
+        <div class="form-group row mb-2">
+            <label class="col-md-2 col-form-label" for="Transportation">ModeOfTransportation:</label>
+            <div class="col-md-8">
+                <input class="form-control" id="Transportation" type="text" formControlName="modeOfTransportation" readonly>
+            </div>
+        </div>
+        <div class="form-group row mb-2">
+            <label class="col-md-2 col-form-label" for="payment">Paymode:</label>
+            <div class="col-md-8">
+                <input class="form-control" id="payment" type="text" formControlName="payMode" required>
+            </div>
+        </div>
+        <div class="form-group row mb-2">
+            <label class="col-md-2 col-form-label" for="confirm">paymentConformation:</label>
+            <div class="col-md-8">
+                <input class="form-control" id="confirm" type="text" formControlName="confirm" required>
+            </div>
+        </div>
+        <div class="form-group row mb-2">
+            <label class="col-md-2 col-form-label" for="hotel">Hotel:</label>
+            <div class="col-md-8">
+                <input class="form-control" id="hotel" type="text" formControlName="hotel" readonly>
+            </div>
+        </div>
+        <div class="form-group row mb-2">
+            <label class="col-md-2 col-form-label" for="status">Statusof:</label>
+            <div class="col-md-8">
+                <input class="form-control" id="status" type="text" formControlName="status" readonly>
+            </div>
+        </div>
+        
+        <div class="form-group row mb-2">
+            <div class="offset-md-2 col-md-4">
+            <button class="btn btn-outline-secondary mr-3"
+              style="width:80px;"
+              type="button"
+              (click)='save()'
+               >
+               Save
+             </button>
+              </div>
+              </div>
+             
+            </form>
+            </div>
+        </div>
+      
+  
+   
+  
+   

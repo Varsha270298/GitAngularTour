@@ -1,15 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of, tap } from 'rxjs';
+import { Observable, ObservedValueOf, of, tap } from 'rxjs';
 import { ITourInfo } from './tourInfo';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TourinfoService {
-   private _url='http://localhost:8282/Tour_Management/customer/resereveid/';
-   private _urlUpdate='http://localhost:8282/Tour_Management/customer/updatereservetour';
-   private _urlGetAll='http://localhost:8282/Tour_Management/reservedpackages';
+   private _baseurl='http://localhost:8282/customer/reservedtour';
+   private _url='http://localhost:8282/customer/resereveid/';
+   private _urlUpdate='http://localhost:8282/customer/updatereservetour';
+   private _urlGetAll='http://localhost:8282/reservedpackages';
   constructor(private http: HttpClient) {}
   
   
@@ -23,6 +24,9 @@ export class TourinfoService {
   }
   getAllReservedPackages():Observable<any>{
     return this.http.get<any>(this._urlGetAll);
+  }
+  addTourInfoPackage(tourpackages: ITourInfo):Observable<any>{
+    return this.http.post<any>(this._baseurl, tourpackages);
   }
   
   }

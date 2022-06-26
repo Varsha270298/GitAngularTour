@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import { AdminAddService } from '../admin-add.service';
+import { Tour } from '../tour';
 
 @Component({
   selector: 'app-add-tour',
@@ -11,7 +12,6 @@ import { AdminAddService } from '../admin-add.service';
 export class AddTourComponent implements OnInit {
 
   message:any;
-
   constructor(private formBuilder: FormBuilder,private router: Router,private apiService: AdminAddService) { }
   addForm!: FormGroup;
 

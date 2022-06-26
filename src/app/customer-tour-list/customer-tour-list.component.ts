@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { AdminAddService } from '../admin-add.service';
 import { Tour } from '../tour';
@@ -10,16 +10,28 @@ import { Tour } from '../tour';
 })
 export class CustomerTourListComponent implements OnInit {
   tours!: Tour[];
-  constructor(private router: Router, private apiService: AdminAddService) { }
+  mytours:Tour[]=[];
+  totalBill:number=0;
+  constructor(private router: Router, private apiService : AdminAddService) { }
     
   ngOnInit(): void {
     this.apiService.getTour()
-      .subscribe(
-         data=>{console.log(data);
-        this.tours=data}
-      );
+    .subscribe(
+       data=>{console.log(data);
+      this.tours=data}
+    );
   }
     Booking(){
-      alert('Tour Has Been Booked Successfully');
+      
+      alert('Proceed To Pay');
+      //this.router.navigate(['app-cart']);
+       this.mytours.forEach(e=>this.totalBill+=(e.amountPerPerson));
  }
+add(t:Tour){
+  this.mytours.push(t)
+  }
+
+
+
+
 }

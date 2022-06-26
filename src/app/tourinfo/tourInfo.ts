@@ -3,8 +3,8 @@ export interface ITourInfo{
 	reserevdPackageId: number;
      packageName:string,
 	 description:string,
-	 startDate:string,
-	  endDate:string,
+	 startDate:Date,
+	  endDate:Date,
 	  noOfPersons:number,
 	 numberOfDays:number,
      amountPerPerson:number,
