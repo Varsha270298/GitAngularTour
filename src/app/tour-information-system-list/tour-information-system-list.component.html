@@ -1,3 +1,4 @@
+<app-admin-dashboard></app-admin-dashboard>
 
 <div class="col-md-6 user-container">
     <h2 style="margin: auto"> Package Details</h2>
@@ -16,16 +17,17 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let t of tours">
+      <tr *ngFor="let tour of tours">
     
-        <td>{{t.packageId}}</td>
-        <td>{{t.packageName}}</td>
-        <td>{{t.description}}</td>
-        <td>{{t.numberOfDays}}</td>
-        <td>{{t.amountPerPerson}}</td>
-        <td>{{t.modeOfTransportation}}</td>
-        <td>{{t.hotel}}</td>
-        
+        <td>{{tour.packageId}}</td>
+        <td>{{tour.packageName}}</td>
+        <td>{{tour.description}}</td>
+        <td>{{tour.numberOfDays}}</td>
+        <td>{{tour.amountPerPerson}}</td>
+        <td>{{tour.modeOfTransportation}}</td>
+        <td>{{tour.hotel}}</td>
+         <td><button (click)="editTour(tour)">Edit</button></td>
+        <td><button  (click)="deleteTour(tour)">Delete</button></td>
       </tr>
       </tbody>
     </table>
