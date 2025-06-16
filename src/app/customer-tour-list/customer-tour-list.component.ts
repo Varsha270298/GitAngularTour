@@ -29,6 +29,7 @@ export class CustomerTourListComponent implements OnInit {
  }
 add(t:Tour){
   this.mytours.push(t)
+  
   }
 
 

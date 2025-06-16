@@ -24,6 +24,7 @@ export class AddUserComponent implements OnInit {
     });
 
   }
+  roleList:string[]=['ADMIN','USER','STAFF',]
 
   onSubmit() {
     this.apiService.createUser(this.addForm.value)

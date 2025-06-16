@@ -6,7 +6,6 @@ html, body {
     justify-content: center;
     align-items: center;
     height: 100vh;
- /* Created with https://www.css-gradient.com */
 background: #010101;
 background: -webkit-linear-gradient(top left, #010101, #3B8297);
 background: -moz-linear-gradient(top left, #010101, #3B8297);
@@ -32,16 +31,12 @@ background: linear-gradient(to bottom right, #010101, #3B8297);
     font-family: monospace;
   }
   .form-group:not(:last-child) {
-    /* height: 100px; */
     margin: 20px 0;
   }
   .form-group > * {
     margin: 5px 0;
   }
-  .form-group:last-child > * {
-    /* margin-right: 25px; */
-    /* text-align: center; */
-  }
+  
   .button2 {
     float: right;
     width: 100%;

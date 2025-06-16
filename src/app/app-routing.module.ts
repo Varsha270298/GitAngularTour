@@ -30,6 +30,7 @@ import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 import { StaffDashboardComponent } from './staff-dashboard/staff-dashboard.component';
 import { AddTourinfoComponent } from './add-tourinfo/add-tourinfo.component';
 import { CartComponent } from './cart/cart.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -65,8 +66,8 @@ const routes: Routes =[
 {path:'app-cart',component:CartComponent},
 
 {path:'staffdashboard', component:StaffDashboardComponent},
-{path:'staff', component:StaffDashboardComponent}
-
+{path:'staff', component:StaffDashboardComponent},
+{path:'ResTourList',component:HomeComponent}
 
 ]
 

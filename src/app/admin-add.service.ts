@@ -17,7 +17,7 @@ export class AdminAddService {
    private GetUrl : string= "http://localhost:8282/tour/id/";
    private updateUrl: string= "http://localhost:8282/tour/edittour";
     private listUrl: string= "http://localhost:8282/tour";
-   private deleteUrl: string= "http://localhost:8282/tour/id";
+   private deleteUrl: string= "http://localhost:8282/tour/id/";
 
   
   addTour(tour:Tour): Observable<any> {

@@ -74,12 +74,7 @@ export class LoginComponent implements OnInit {
     
    });
 
-     // (data:User)=>{this.user=data;
-    
-     // if(this.user.role==='USER')
-       //this.router.navigate(['listtour'])
-      // else if(this.user.role==='ADMIN')
-      // this.router.navigate(['admin-dashboard'])
+     
 
       }
     

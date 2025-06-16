@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-html, body {
-  height: 100vh;
-=======
 html {
   width: 100%;
   height: 100%;
->>>>>>> 78e9a4cf2d915032c34943e649fafa7f86172667
 }
 .row_container {
   display: flex;
@@ -35,7 +30,7 @@ html {
 
   font-family: monospace;
 }
-<<<<<<< HEAD
+
 .form-group:not(:last-child) {
   height: 100px;
   margin: 20px 0;
@@ -43,10 +38,7 @@ html {
 .form-group > * {
   margin: 5px 0;
 }
-.form-group:last-child > * {
-  /* margin-right: 25px; */
-  /* text-align: center; */
-}
+
 .button1 {
   width: 35%;
 }
@@ -60,7 +52,7 @@ html {
   letter-spacing: 1.5px;
   font-family: monospace;
 }
-=======
+
 
 .gradient-custom {
   /* fallback for old browsers */
@@ -72,12 +64,4 @@ html {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 782f62e4934b5d6487f6a5edeb5a949e08fbba8f
->>>>>>> 6081dd6a9d90e5557de711ed2f69006ecadf85fd
->>>>>>> de84bbc533997c2e8c568b35fbd9dc340dbb391e
->>>>>>> 78e9a4cf2d915032c34943e649fafa7f86172667
+
